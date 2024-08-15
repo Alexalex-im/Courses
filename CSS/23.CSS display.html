@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>display</title>
+<style>
+    body{
+        background-color:gray;
+        color:darkolivegreen;
+        font-size:22px;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        width:1000px;
+        margin:0 auto;
+        line-height:40px;
+    }
+
+    div.outer1{
+        background-color:darkslateblue;
+        color:white;
+        height:100px;
+        padding:20px;
+        display:block;
+    }
+
+    div#outer2{
+        background-color:orange;
+        color:blue;
+        height:100px;
+        display:block;          /* none */
+        margin-top:20px;
+        padding:20px;
+    }
+
+    div#outer3{
+        background-color:green;
+        color:yellow;
+        padding:20px;
+        margin:40px 0;
+    }
+
+    #prep{
+        color:brown;
+        background-color:yellowgreen;
+        font-family:cursive;
+        display:block;
+    }
+
+    ul{
+        background-color:coral;
+    }
+
+    ul li{
+        background-color:coral;
+        padding:0 10px;
+        color:darkblue;
+        display:inline-block;
+        height:50px;
+        width:150px;
+    }
+
+    a:visited{
+        color:lightgreen;
+    }
+
+    a:active{
+        color:hotpink;
+        display:block;
+    }
+
+    a:hover{
+        display:block;
+    }
+
+
+</style>
+</head>
+<body>
+    <h1>Everyday Science</h1>
+
+    <div class="outer1">
+        Photosynthesis
+    </div>
+
+    <div id="outer2">
+        Food Preparation
+    </div>
+    <div id="outer3">
+        <p>
+            Conditions necessary for photosynthesis<a href="#">click for references</a>
+            Green plants need the following to prepare their own food
+            <span id="prep">Carbondioxide,chlorophyll,sunlight,water,minerals</span>
+            these are used to prepare food
+        </p>
+        <ul class="prep">
+            <li>Carbondioxide</li>
+            <li>Chlorophyll</li>
+            <li>Sunlight</li>
+            <li>Water</li>
+            <li>Minerals</li>
+        </ul>
+    </div>
+
+
+
+
+
+CSS-display    
+
+Used to change the default display of html element on the web page
+    - block
+    - inline
+    - inline-block 
+    - none
+
+
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Attribute selector</title>
+<style>
+     body{
+        background-color: rgb( 0, 255, 234);
+        width:900px;
+        margin: 0 auto;
+    }
+
+    h1{
+        text-align: center;
+        color: green;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        height:70px;
+        background-color: coral;
+        padding-top: 20px;
+    }
+    #count{
+        font-weight: bold;
+        color:rgb( 177, 34, 177);
+        font-size:18px;
+    }
+
+    /*Attribute selectors */
+
+    [class]{
+        color:red;
+    }
+
+    h3[class],h4[class]{
+        color:blue;
+    }
+
+    [title]{
+        color:blueviolet;
+        font-weight;bold;
+    }
+
+    [title='animals']{
+        background-color: cornsilk;
+
+    }
+
+    [class='region']{
+        background-color:yellow;
+    } 
+
+    input[type='text']{
+        border:3px;
+        border-style:solid;
+        border-color: blue;
+        border-radius: 3px; 
+    }
+
+    [class ~='region']{
+        color:chartreuse;
+        background-color: darkblue;
+    }
+
+    [class|='pol']{
+        font-weight: bold;
+        font-style: italic;
+        font-variant: small-caps;
+        color:darkmagenta;
+    }
+
+    [class^='pol']{
+        font-family: cursive;
+        font-size:18px;
+        background-color: darkseagreen;
+    } 
+
+     [class$='region']{
+        font-style: 10px;
+        background-color: gold;
+    } 
+
+    [class*='ola']{
+        color:deeppink;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 15px;
+    }
+
+
+
+
+
+</style>
+</head>
+<body>
+    <h1>SCIENCE - Climate</h1>
+
+    <p title="climate">The average weather pattern that prevails over a long period of time in a place is called climate of that place.</p>
+    <h3 class="h1">Adaptions of animals to different climate conditions</h3>
+    <div>
+    <p title="animals">We have already learn about different adaptive features which animals develop to live in different
+        habitates such as aquatic, terrestrial and amphibious.
+    </p>
+    <h4 class="h1">Adaptation of animals in polar region.</h4>
+    <p class="region">Polar region remains covered with snow throughput the year.North polar regionalso called artic region.while south
+        polar region is called antartic region.
+    </p>
+    <p class="region-pol">Polar region remains covered with snow throughput the year.North polar regionalso called artic region.while south
+        polar region is called antartic region.
+    </p>
+    <p class="region">Some of the countries located in artic region are <span id="count"> canada, greenland, iceland, norway, 
+        Finland and sweden</span>.It is very cold there.the sun does not set for 6 month poles and do not raise
+    at another 6 month.</p>
+    <p class="pol-ani">In winters temperature may be as low as -37 degree celcious.Animals live in polar region are
+        <q lang="quo">Polar bears and penquins</q>
+    </p>
+    <a href="polaranimals.html" target="_blank">Click to view the polar region animals</a>
+    <h4>Polar bear</h4>
+    <p class="pol region">Polar bear are found in artic region which remainds covered by snow</p>
+    <ol>
+        <li>Polar bears have a thick layer of white fur and lot of fat in their body to keep them warm</li>
+        <li>White color of polar bear helps to camouflage it from prey</li>
+        <li>It has short stocky claws which help it to hunt the heavy prey in both land and water</li>
+        <li>claws are curved inwards to help diging ice</li>
+        <li>It has large feet to allow to distribuite his body weight in walking on snow and thin ice sheets 
+            and helped to swim in water</li>
+    </ol>
+    Enter your favorite animal:<input type="text">
+
+<h4>Penguin</h4>
+<p class="polar1">penguins is the well known aquatic, fightless bird that is found only in antartic region.</p>
+    <ul>
+        <li>The front part of the penguin is white in color and this merges well into the white background of the snow</li>
+        <li>Penguins huddle together in groups to stay warm and fight their enemies</li>
+        <li>Pengiuns dive into the water to hunt heit prey that can hold their breath under water</li>
+        <li>Penguins are also adapted to drink salt water</li>
+        <li>Penguins slide on the snow in a percular manner seeing from side to side</li>
+    </ul>
+<p class="an-polar">It has large feet to allow to distribute his body weight in walking on snow and thin ice sheets and helped to swim in water</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Css Attribute selector[]
+
+    - Attribute
+    - Attribute = value
+    - Attribute ~ = value
+    - Attribute | = value
+    - Attribute ^ = value
+    - Attribute $ = value
+    - Attribute * = value
+</body>
+</html>

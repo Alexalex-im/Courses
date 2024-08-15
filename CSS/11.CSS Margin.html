@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Css margin</title>
+<style>
+
+    body{
+        
+         width:1050px; 
+        margin:0 auto;                 /*  arranging in center */
+        background-color:violet;
+        font-size: larger;
+    }
+
+    h2{
+        border:5px dotted green;
+    }
+
+    h4{
+        border-style:solid;
+        margin:50px 20px 100px;
+    }
+    h4#dash{
+        border-style:dashed;
+        margin-left:10px;               /* 20% or 2cm or auto*/
+        margin-right:20px;
+        margin-top:40px;
+        margin-left:30px;
+        margin-bottom:-20px;
+    }
+
+    
+</style>
+</head>
+<body>
+
+    <h1>CSS - Border</h1>
+    <h1 >Solid Border</h1>
+    <h1 >Dashed border</h1>
+    <h4>Groove Border</h4>
+    <h4 id="dash">Ridge Border</h1>
+
+    <p class="style">Polar region remains covered with snow throughput the year.North polar regionalso called artic region.while south
+        polar region is called antartic region.Polar region remains covered with snow throughput the year.North polar regionalso called artic region.while south
+        polar region is called antartic region.Polar region remains covered with snow throughput the year.North polar regionalso called artic region.while south
+        polar region is called antartic region.</p>
+
+    <h2>Border style</h2>
+
+    <p class="styl">Polar region remains covered with snow throughput the year.North polar regionalso called artic region.while south
+        polar region is called antartic region.Polar region remains covered with snow throughput the year.North polar regionalso called artic region.while south
+        polar region is called antartic region.Polar region remains covered with snow throughput the year.North polar regionalso called artic region.while south
+        polar region is called antartic region.</p>
+
+    <p class="border">Polar region remains covered with snow throughput the year.North polar regionalso called artic region.while south
+            polar region is called antartic region.Polar region remains covered with snow throughput the year.North polar regionalso called artic region.while south
+            polar region is called antartic region.Polar region remains covered with snow throughput the year.North polar regionalso called artic region.while south
+            polar region is called antartic region.</p>
+
+
+
+CSS margin
+
+To set the outer space of the element
+    - Margin - Top
+    - Margin - Right
+    - Margin - Bottom
+    - Margin - Left                      ____________________________________
+                                         |           Paragraph              |
+                                         |__________________________________|
+
+
+Margin Values
+    - Length - px, cm, pt
+    - % - width of the element
+    - Auto - Automatically calculate by browser
+    - Inherit - margin values taken from its parent
+
+Negative Margin
+
+    - To overlap the element
+
+Margin Collapse
+    - If the margin values of two consecutive element is different the large marginis taken into account.
+    - If the margin value of two consecutive element is same then one margin value is taken into account.
+
+    Eg:
+        p{margin-bottom:30px;}
+        h4{margin-top:40px;} => 40px gap between two elements
+</body>
+</html>

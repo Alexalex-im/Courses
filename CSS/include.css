@@ -1,0 +1,30 @@
+
+
+
+
+@import "mydesign.css";
+
+body{
+    background-color: rgb( 0, 255, 234);
+    width:900px;
+    margin: 0 auto;
+}
+
+h1{
+    text-align: center;
+    color: green;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height:70px;
+    background-color: coral;
+    padding-top: 20px;
+}
+#count{
+    font-weight: bold;
+    color:rgb( 177, 34, 177);
+    font-size:18px;
+}
+
+h3,h4{
+    color:red;
+    padding:.5em;
+}

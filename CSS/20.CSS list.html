@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>css list</title>
+<style>
+    body{
+        width:700px;
+        padding:10px;
+        margin:0 auto;
+        font-family:serif;
+        background-color:green;
+        color:white;
+    }
+
+    h1{
+        color:pink;
+        font-weight:bold;
+    }
+
+    h3{
+        color:yellow;
+        font-family:monospace;
+        font-size:24px;
+    }
+
+    #para1,#para2,#para3{
+        font-size:20px;
+    }
+
+    ol,ul{
+        font-size:20px;
+    }
+
+    /* ul.ch{
+        list-style-type:square;
+        list-style-position:inside;
+    } */
+
+    ul.ch{
+        list-style:circle inside;
+    }
+
+    ol.phy{
+        list-style-type:decimal-leading-zero;
+        background-color:orange;
+        border:5px solid brown;
+        list-style-position:inside;
+    }
+
+    ol.phy li{
+        background-color:blue;
+        margin:10px;
+    }
+    ul.phy{
+        list-style-type:none;
+        list-style-image:url('mickey.jpg');
+    }
+
+    ul.che{
+        list-style-type:none;
+    }
+
+    ul.che li::before{
+        content:'';
+        display:inline-block;
+        height:35px;
+        width:35px;
+        background-size:35px;
+        background-image:url(flo.png);
+        margin-right:10px;
+        padding-bottom:10px;
+        vertical-align:middle;
+        background-position:center;
+        background-repeat:no-repeat;
+
+    }
+</style>
+</head>
+<body>
+    <h1>Physical changes and chemical changes</h1>
+    <div>
+        <h3>Changes in everyday life</h3>
+        <p id="para1">
+            Some changes observed in our daily life are
+            <ul class="ch">
+                <li>Burning of fuel</li>
+                <li>Drying of clothes</li>
+                <li>Evaporation of water</li>
+                <li>Formation of curd from milk</li>
+                <li>Melting of wax</li>
+                <li>Ripening of fruits</li>
+                <li>Cooking food</li>
+                <li>Melting of wax</li>
+            </ul>
+            </p>
+        </div>
+<h3>Physical changes</h3>
+<p id="para2">
+    Changes in the physical properties of a substance without any changes in the chemical
+    composition.Example are
+    <ul class="phy">
+        <li>Crushing a piecec of chalk</li>
+        <li>Melting of ice</li>
+        <li>Evaporation of water</li>
+        <li>Freezing</li>
+    </ul>
+</p>        
+
+<h3>Chemical changes</h3>
+
+<p id="para3">
+    Changes in the substance which are irreversible.changes in chemical composition.Lot of
+    energy is given out or absorbed.Example are
+    <ol class="phy1">
+        <li>Rusting of iron</li>
+        <li>Lightning of matchsticks</li>
+        <li>Formation</li>
+        <li>Growing of seed into seeding</li>
+        <li>Milk into curd</li>
+    </ol>
+</p>
+
+<h3>Recall</h3>
+
+<p id="para4">
+    Changes in the substance which are irreversible.changes in chemical composition.Lot of
+    energy is given out or absorbed.Example are
+    <ul class="che">
+        <li>Changes - Physical and decimal</li>
+        <li>Physical changes - Temporary change</li>
+        <li>Chemical change - Permanent changes</li>
+        <li>Crystalization - Process of cooling a hot to obtain crystals</li>
+        <li>Rusting - the products of reddish brown coating on iron surface</li>
+    </ul>
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CSS lists
+
+List - Ordered list,unordered List
+
+List style
+    list-style-type => To display different shapes and appearances of maker
+    list-style-image => Images can be used instead of marker
+    list-style-position => To control the position of the marker
+
+
+
+List-marker type
+
+List-style-type => used to change lists marker type
+unordered lists
+    - disc, circle, square, none
+ordered lists
+    - Upper-roman,lower-alpha,lower-roman,decimal,
+      decimal-leading-zero,none
+
+
+
+Lists-position
+
+List-style-position => used to control the position of the marker
+
+    - inside-marker will be displayed within the list item
+    - outside-marker will be displayed outside the list item (default)
+
+
+List-image
+
+List-style-image => used to display the specific image as marker 
+    - eg:list-style-image:url("img/icon.png");
+
+
+List short hand
+
+This property is used to set all properties in one line.
+    - type
+    - position
+    - image
+
+</body>
+</html>

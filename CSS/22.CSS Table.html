@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width,initial-scale=1.0">
+<title>css table</title>
+<style>
+
+    body{
+        background-color:antiquewhite;
+        color:blue;
+        font-size:20px;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        width:800px;
+        margin:0 auto;
+    }
+
+    table,th,td{
+        border:2px solid red;
+        border-collapse:separate;       /* collapse or separate */
+        border-spacing:10px;
+        caption-side:bottom;
+        empty-cells:show;               /* hide or show */
+        width:100px;
+        table-layout:fixed;              /* auto or fixed*/
+
+        text-align:left;        /* left or right */
+        padding:5px;
+        vertical-align:middle;  /* bottom or top or middle */
+
+    }
+    h1{
+        text-align:center;
+        color:sienna;
+    }
+    table{
+        width:80%;      
+    }
+    th{
+        height:25px;    /* 25px or 50px */
+        color:white;
+        background-color:green;
+    }
+</style>
+</head>
+<body>
+
+<h1>Employee's Information table</h1>
+<table class="emp">
+    <caption>Table 1.1 employee's Information</caption>
+    <tr><th>Name</th><th>Designation</th><th>Exp yrs</th></tr>
+    <tr><td>Rakesh</td><td>Manager</td><td>4</td></tr>
+    <tr><td>Soniya Raj</td><td>Coordinator</td><td>5</td></tr>
+    <tr><td>Harish</td><td>Team leader</td><td>4</td></tr>
+    <tr><td>Lilly</td><td>Employee</td><td>2</td></tr>
+    <tr><td>Meera</td><td>Employee</td><td>1</td></tr>
+    <tr><td>Ashutosh</td><td>Employee</td><td></td></tr>
+    <tr><td>Trinayan</td><td>Employee</td><td>4</td></tr>
+
+</table>
+
+
+
+
+CSS-table 
+
+used to style the html tables
+    - border:width, color
+    - border-collapse:collapse, separate
+    - border-spacing:values
+
+
+CSS-table
+    - caption-side:top, bottom
+    - empty-cells:show, hide
+    - table layout:auto, fixed
+
+
+CSS-table text alignment
+    - Table size:width, height
+    - Horizontal alignment:text-align
+    - Vertical alignment:vertical-align 
+    - Text space:padding
+</body>
+</html>

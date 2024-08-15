@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>list menu</title>
+<style>
+    body{
+        background-color:rgb(50, 205, 89);
+        font-family:'Courier New', Courier, monospace;
+        margin:0;
+        font-size:24px;
+        font-weight:bold;
+    }
+
+    h1{
+        text-align:center;
+        color:darkblue;
+        padding:10px;
+    }
+
+    ul{
+        list-style:none;
+
+    }
+
+    ul li{
+        width:150px;
+        text-align:center;
+    }
+
+    ul li a{
+        text-decoration:none;
+        display:block;
+        background-color:hotpink;
+        padding:10px;
+    }
+
+    ul li ul{
+        display:none;
+    }
+
+    ul li:hover ul{
+        display:block;
+    }
+
+    .nav{
+        padding-left:500px;
+    }
+</style>
+</head>
+<body>
+
+    <h1>Programming line</h1>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="nav">
+        <ul>
+        <li><a href="#">Home</a>
+        <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Courses</a></li>
+        <li><a href="#">Practices</a></li>
+        </ul>
+        </li>
+        </ul>
+    </div>
+
+
+
+
+
+
+
+</body>
+</html>
