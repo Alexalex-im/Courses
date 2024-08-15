@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JS DOM Property Inner HTML</title>
+<script>
+
+    function show(){
+        var p1 = document.getElementById("para1");
+        p1.innerHTML = "Welcome to learn Javascript DOM property\
+                        by Programming Line";
+    }
+
+
+    function list1(){
+        var l1 = document.getElementById("list1");
+        l1.innerHTML = "<li>HTML</li><li>Javascript</li><li>CSS</li><li>Java</li>";       //l1.innerHTML = "";      // console.log(l1.innerHTML);
+    }
+
+    function formReg(){
+        var info = "Name:<input type='text' name='name'>\
+                    Age: <input type='text' name='age'>\
+                    <input type='button' value='Register' onclick='info1()' >";
+        var reg = document.getElementById("form");
+        reg.innerHTML = info;
+    }
+
+    function info1(){
+
+        var in1 = document.getElementById("tnk");
+        tnk.innerHTML = "Thankyou for regisration";
+    }
+
+</script>
+</head>
+<body>
+
+<h4>Javascript DOM-innetText</h4>
+<p id="para1"></p>
+<ul id="list1">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+</ul>
+<input type="button" value="Message" onclick="show();">
+
+<input type="button" value="List" onclick="list1();">
+<div id="form"></div>
+<div id="tnk">
+</div>
+Click here to register<br>
+<input type="button" value="Submit" onclick="formReg();">
+
+<!-- <br>
+<input type="button" value="List" onclick="info1();"> -->
+
+<br>
+<br>
+<br>
+Javascript-DOM Property 
+
+    - innerHTML 
+
+        - Return the HTML content of the specific element 
+
+        - Used to create dynamic web content 
+
+        - Used to create forms, links depends on user interaction 
+
+
+</body>
+</html>

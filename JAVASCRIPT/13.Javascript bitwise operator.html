@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>js bitwise operator</title>
+<script>
+
+    var num1=11, num2=3, value1, value2, value3=0;
+
+    value1=num1.toString(2);
+    value2=num2.toString(2);
+    document.write("Binary value of 11 :" +value1 + "<br>"); //0000 1011
+    document.write("Binary value of 7 :" +value2 + "<br>");  //0000 0011
+
+    //AND
+    value3=num1&num2;
+    document.write("AND Result of (11 & 7) : "+value3.toString(2) + "<br>" +"<br>");
+
+    //OR 
+    value3=num1|num2;
+    document.write("OR Result of (11 | 7) : "+value3.toString(2) + "<br>" +"<br>");
+
+    //XOR
+    value3=num1^num2;
+    document.write("XOR Result of(11 ^ 7) : "+value3.toString(2) + "<br>" +"<br>");
+
+    //NOT
+    value3=~num2;
+    document.write("NOT Result of (11 ~ 7) : "+value3.toString(2) + "<br>" +"<br>");
+
+    //Left shift
+    document.write("Left shift of(num1 << 1)=" +(num1 << 1).toString(2) +"<br>");
+
+    //Right shift
+    document.write("Right shift of (num1 >> 1) =" +(num1 >> 1).toString(2) +"<br>");
+
+    //Zero fill right shift
+    document.write("Zero fill right shift of (num1 >>> 1) =" +(num1 >>> 1).toString(2) +"<br>");
+
+</script>
+</head>
+<body>
+
+Javascript bitwise operator
+                            __________________________________________________
+                            |   Operators  |  Description                    |
+                            --------------------------------------------------
+                            |      &       |  Bitwise AND                    |
+                            --------------------------------------------------
+                            |      |       |  Bitwise OR                     |
+                            -------------------------------------------------- 
+                            |      ^       |  Bitwise XOR                    |
+                            -------------------------------------------------- 
+                            |      ~       |  Bitwise NOT                    |
+                            -------------------------------------------------- 
+                            |      <<      |  Bitwise Left shift             |
+                            -------------------------------------------------- 
+                            |      >>      |  Bitwise Right shift            |
+                            -------------------------------------------------- 
+                            |      >>>     |  Bitwise Right shift with zero  |
+                            -------------------------------------------------- 
+
+
+Logical function 
+
+        _________________             _________________            __________________         ___________ 
+        |      AND      |             |       OR      |            |     XOR        |         |   NOT   |  
+        -----------------             -----------------            ------------------         -----------
+        | a  | b  |  &  |             | a  | b  |  |  |            | a  | b  |  ^   |         | a  |  ! |
+        -----------------             -----------------            ------------------         -----------
+        | 0  | 0  |  0  |             | 0  | 0  |  0  |            | 0  | 1  |  0   |         |  0 |  1 |
+        -----------------             -----------------            ------------------         -----------
+        | 1  | 1  |  1  |             | 0  | 1  |  1  |            | 0  | 1  |  1   |         |  1 |  0 |
+        -----------------             -----------------            ------------------         -----------
+        | 0  | 1  |  0  |             | 1  | 0  |  1  |            | 1  | 0  |  1   |
+        -----------------             -----------------            ------------------
+        | 1  | 0  |  0  |             | 1  | 0  |  1  |            | 1  | 1  |  0   |
+        -----------------             -----------------            ------------------
+
+
+
+
+
+Advantages of Bitwise operators
+
+    - Bit level programming
+
+    - Calculations are faster than arithmetic 
+
+    - Encode / Decode data in a compact way 
+
+    - Programming hardware registers in Embedded Systems and satellite communication system
+
+
+</body>
+</html>

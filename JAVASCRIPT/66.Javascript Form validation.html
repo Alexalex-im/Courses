@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+<title>JS Form validation</title>
+<link rel="stylesheet" href="formex2_style.css">
+<script>
+
+ function printError(elemID, msg){
+
+    document.getElementById(elemID).innerHTML=msg;
+ }
+
+ function validateForm(){
+    var name = document.contactform.name.value;
+    var mail = document.contactform.email.value;
+    var mobile = document.contactform.mobile.value;
+    var country = document.contactform.country.value;
+    var gender = document.contactform.gender.value;
+
+    var hobbies = []
+    var checkboxes = document.getElementsByName("hobbies[]");
+
+    for( var i=0; i<checkboxes.length; i++ ){
+        if( checkboxes[i].checked){
+            hobbies.push( checkboxes[i].value);
+        }
+    }
+    var nameErr = emailErr = mobilErr = countryErr = genderErr = true;
+
+    if( name == ""){
+        printError("nameerr", "Enter your name");
+        return false;
+    }else{
+        var regex = /^[a-z A-Z\s]$/;
+        if( regex.test (name) === false){
+            printError ("nameErr", "Enter the valid name");
+            return false;
+        }else{
+            printError("nameErr" ," ");
+            nameErr=false;
+        }
+    }
+
+    if( mail == ""){
+        printError("emailErr", "Enter your email ID");
+        return false;
+    }else{
+        var regex = /^\S+@\S\.\S+$/;
+        if( regex.test (mail) === false){
+            printError ("emailErr", "Enter the valid email ID ");
+             return false;
+        }else{
+            printError("emailErr" ," ");
+            emailErr=false;
+        }
+    }
+
+    if( mobile == ""){
+        printError("mobileErr", "Enter your mobile number");
+        return false;
+    }else{
+        var regex = /^[1-9] \d{9}$/;
+        if( regex.test (mobile) === false){
+            printError ("mobileErr", "Enter the valid mobile number");
+             return false;
+        }else{
+            printError("mobileErr" ," ");
+            mobileErr=false;
+        }
+    }
+
+    if( country == ""){
+        printError("countryErr", "select your country");
+        return false;
+    }else{
+        var regex = /^[1-9] \d{9}$/;
+            printError ("genderErr", " ");
+             return false;  
+    }
+
+    if( (nameErr|| emailErr||mobileErr||countryErr||genderErr)==true){
+        return false;
+    }else{
+        var data = "Details :\n" +
+        "name :" +name+"\n"+
+        "email ID :" +mail+"\n"+
+        "Mobile No :" +mobile+"\n"+
+        "Country :" +country+ "\n"+
+        "gender :" +gender+"\n";
+
+        if(hobbies.length){
+            data += "Hobbies" +hobbies.join()
+        }
+        alert(data);
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</head>
+<body bgcolor="red">
+<form name="contactForm" onsubmit="return validateForm();" action="formoutput.html" method="post">
+
+<h2>Application form</h2>
+
+<div class="row">
+    <label>Full name</label>
+    <input type="text" name="name">
+    <div class="error" id="nameErr"></div>
+</div>
+
+<div class="row">
+    <label>email Address</label>
+    <input type="text" name="email">
+    <div class="error" id="emailErr"></div>
+</div>
+
+<div class="row">
+    <label>Mobile Number</label>
+    <input type="text" name="mobile" maxlength="10">
+    <div class="error" id="mobileErr"></div>
+</div>
+
+<div class="row">
+    <label>country</label>
+    <select name="country">
+        <option>Select</option>
+        <opion>Australia</opion>
+        <option>India</option>
+        <option>United States</option>
+        <option>United Kingdom</option>
+    </select>
+    <div class="error" id="countryErr"></div>
+</div>
+
+<div class="form-inline">
+    <label>Gender</label>
+    <label><input type="radio" name="gender" value="male"></label>
+    <label><input type="radio" name="gender" value="female"></label>
+</div>
+<label>Hobbies <i>Optional</i></label>
+<div class="form-inline">
+    <label><input type="checkbox" name="hobbies[]" value="sports">sports</label>
+    <label><input type="checkbox" name="hobbies[]" value="movies">Movies</label>
+    <label><input type="checkbox" name="hobbies[]" value="music">Music</label>
+</div>
+<div class="row">
+    <input type="submit" value="submit">
+</div>
+</div>
+
+
+
+
+
+
+
+</form>
+
+<br>
+<br>
+<br>
+JS - form Example
+
+    - Application Form 
+
+    - validation using regular Expressions
+
+</body>
+</html>

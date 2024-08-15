@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JS cookies, session, local storage</title>
+<script>
+
+        localStorage.setItem("name", "programming Line");
+        localStorage.setItem("lang" ,"JS");
+        console.log(localStorage.getItem("lang"));
+        console.log(localStorage.getItem("name"));
+        console.log(localStorage.length);
+        localStorage.removeItem("lang");
+        console.log(localStorage.length);
+        localStorage.clear();
+        console.log(localStorage.length);
+
+        sessionStorage.setItem("color","blue");
+        sessionStorage.setItem("fontfamily","times new roman");
+        console.log(sessionStorage.getItem("fontfamily"));
+        console.log(sessionStorage.length);
+
+        // document.cookie = "name=Rakesh";
+        document.cookie = "name=sandhosh; expires="+new Date(2022,3,4).toUTCString();
+
+
+
+</script>
+</head>
+<body bgcolor="limegreen">
+
+
+<h2>Local Storage / Session Storage / cookie </h2>
+
+<p>Javascript Storage methods are explained with examples.
+    In session and local storage data are stored by browser. In cookie,
+    data are stored and used by both server & client.
+</p>
+
+
+<br>
+<br>
+<br>
+
+Javascript Cookies / session / Local Storage 
+
+    - session - Used to store untill the current browser tab exists 
+
+    - Local storage - Used to store data permanently in hard drive 
+
+    - Cookies - a piece of data that stored in our system as a text file to be 
+      accessed by our browser.
+
+
+
+Javascript Cookies / session / Local Storage differences 
+
+    --------------------------------------------------------------------------------------------------
+    |                    |  Storage    |  Expires      |  Storage          |  sent with  |  Access   |
+    |                    |  capacity   |               |  Location         |  request    |  Window   |
+    -------------------------------------------------------------------------------------------------- 
+    |  Cookies           |  4KB        |  Manual set   |  server & browser |  Yes        |  Any      |
+    --------------------------------------------------------------------------------------------------
+    |  Local Stroge      |  10MB       |  Never        |  Browser only     |  No         |  Any      |
+    -------------------------------------------------------------------------------------------------- 
+    |  Session storage   |  5MB        |  On tab close |  Browser only     |  No         |  Same tab |
+    --------------------------------------------------------------------------------------------------
+
+
+Local / Session Storage methods 
+
+    - setItem ( key , value )
+
+    - getItem ( key )
+
+    - removeItem ( key )
+
+    - clear ( )
+
+    - keyIndex ( index )
+
+ Property
+
+    - length 
+
+
+</body>
+</html>

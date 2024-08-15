@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JS Document Object Model Part - 2</title>
+
+<script>
+
+    function change(){
+
+        var changeClr = document.getElementById("p1");
+        changeClr.style.background="yellow";
+        var changeFnt = document.getElementById("p2");
+        changeFnt.style.fontStyle = "Italic";
+        // document.write(changeClr);
+        // console.log(changeClr);
+    }
+    
+
+    function display(){
+        var empName = document.getElementById("name1").value;
+        var empID = document.getElementById("ID1").value;
+        var empDesig = document.getElementById("desig1").value;
+        alert (" Employee " +empName+ " ID :" +empID+ " working as " +empDesig);
+
+    }
+
+
+    function check(){
+
+        var frt = document.getElementsByName("fruit");
+        if(frt[1].checked)
+        {
+            alert("Orange is a citrus fruit ");
+        }else{
+            alert("Mango is not a citrus fruit");
+        }
+    }
+
+</script>
+</head>
+<body>
+
+<h4>Javascript DOM - Element by ID </h4>
+<p id="p1">Subscribe Programming Line by Rakesh</p>
+<p id="p2">computer Languages are explained clearly and 
+    you can get enough knowledge to code your own program</p>
+
+<input type="button" value="click" onclick="change();">
+
+<br>
+<br>
+<br>
+<br>
+
+EMPLOYEE NAME 
+<input type="text" value="varun" id="name1">
+
+<br>
+EMPLOYEE ID 
+<input type="text" value="001" id="ID1">
+
+<br>
+DESIGNATION
+<input type="text" value="SiteManager" id="desig1">
+<input type="button" value="submit" onclick="display();">
+
+<br>
+<br>
+<br>
+<br>
+
+SELECT CITRUS FRUIT 
+<br>
+Mango <input type="radio" name="fruit">
+<br>
+Orange <input type="radio" name="fruit">
+<br>
+<input type="button" value="check" onclick="check();">
+
+
+<br>
+<br>
+<br>
+Javascript-DOM Methods 
+
+    - getElementByID()
+
+    - getElementByName()
+
+    - getElementByTagName()
+
+    - getElementByClassName()
+
+
+getElementByID()
+
+    - Used to find and retrieve an HTML element using the specific ID 
+
+    - Element ID must be unique
+
+getElementByName()
+
+    - Used to find and retrieve all HTML elements using the specific name.
+
+    - Elements are accessed in an array.
+
+</body>
+</html>

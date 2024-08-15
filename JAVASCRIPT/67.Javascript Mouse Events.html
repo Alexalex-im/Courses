@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JS Mouse Events</title>
+<style>
+    body{
+        background-color:burlywood;
+    }
+
+    button{
+        background-color:red;
+        color:yellow;
+        border:none;
+        padding:10px;
+        font-size:20px;
+    }
+
+    p{
+        font-size:20px;
+        color:midnightblue;
+    }
+
+    #container{
+        width:250px;
+        height:250px;
+        border:2px solid red;
+    }
+</style>
+<script>
+
+        function funcClick(){
+            var value;
+            value =document.getElementById("b1").innerHTML="Learn Javascript";
+        }
+
+        function funcClick1(id){
+            id.innerHTML="welcome to Learn Javascript";
+        }
+
+        function myFunction(item, clr){
+            item.style.color=clr;
+        }
+
+        function coordinates(event){
+            var x = event.clientX;
+            var y = event.clientY;
+            var co = "x and y position :" +x+ "," +y;
+            document.getElementById("position").innerHTML=co;
+        }
+
+
+</script>
+</head>
+<body>
+
+<h1>Javascript - Events</h1>
+<h2>Mouse Event - click</h2>
+
+<h1 style="color:blueviolet;" onclick="this.innerHTML='welcome'">Click this text</h1>
+
+<button id="b1" onclick="funcClick();">Click here</button>
+<br>
+<p onclick="funcClick1(this);">Click here</p>
+
+<!-- Mouse over and Mouseout examples -->
+
+<p onmouseover="style.color='red'" onmouseout="style.color='black'">Mouse Events</p>
+
+<!-- MouseDown Mouseup example -->
+
+<p onmousedown="myFunction(this,'red');" onmouseup="myFunction(this,'green');">
+
+Click the text and function, is triggered when the mouse button is pressed down, and again, with 
+other parameters, when the mouse button is released.
+
+</p>
+
+<!-- Mousemove example -->
+<div id="container" onmousemove="coordinates(event);"></div>
+
+<span id="position"></span>
+
+
+
+
+
+
+
+
+
+
+<br>
+<br>
+<br>
+Javascript - Events 
+
+    - Occurance of any happening by user on the web page - events 
+
+    - Program that perform the operation that respond to that events - Event handlers 
+
+    - events performed by user of the web page, Event handler is performed by browser 
+
+
+Mouse Events
+
+    - click 
+
+    - MouseOver 
+
+    - MouseOut 
+
+    - MouseDown 
+
+    - MouseUp
+
+    - MouseMove
+
+
+</body>
+</html>

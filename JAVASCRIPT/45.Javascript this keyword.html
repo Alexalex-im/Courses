@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-compatible" content="ie=edge">
+
+<title>JS this keyword</title>
+<script>
+
+    var name = "Rakesh";
+    document.write(this.name);
+    var owner = this;
+    document.write("<br>" ,owner);
+
+    var book={
+        name:"Programming In C",
+        author:"Balagurusamy",
+        publisher:"Eswar Press",
+        title:function(){
+            return this.name + " by " + this.author;
+        }
+    };
+    document.write("<br>" ,book.title());
+
+
+    function show(){
+        // 'use strict';
+        return this;
+    }
+    document.write("<br>" ,show());
+
+
+    var calc = {
+        sum(){
+            return this.a+this.b;
+        },
+        mul(){
+            return this.a*this.b;
+        },
+        read(){
+            this.a = +prompt("Enter value a :" ,1);
+            this.b = +prompt("Enter value b :" ,2);
+        }
+    }
+
+    calc.read();
+    document.write("<br> Addition :" ,calc.sum());
+    document.write("<br> Multiplication :" ,calc.mul());
+
+</script>
+
+<button onclick="this.style.color='red'">click here</button>
+
+</head>
+<body>
+
+<br>
+<br>
+<br>
+
+Javascript-This 
+
+    - Keyword 'this' refers to the current object it belongs to.
+
+    - It has different values depending on where it is used.
+
+    - Method - owner object 
+
+    - Alone - global object 
+
+    - Function - global object 
+
+    - Strict mode - Undefined
+
+    - Event - element that received event
+
+
+
+</body>
+</html>

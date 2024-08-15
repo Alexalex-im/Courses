@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JS Date object & Functions</title>
+<script>
+    var d = new Date();             // var d = new Date(0);
+    document.write(d);
+    var d1 = new Date(1989, 9, 23, 11, 45, 12);
+    document.write("<br>", d1);
+    var d2 = new Date(200000000000);        // var d2 = new Date(-200000000000);
+    document.write("<br>" ,d2);
+    var d3 = new Date("October 02, 1948 8:30:12");
+    document.write("<br>", d3);
+
+
+    document.write("<br> <br>Date formats</b>");
+    var df = new Date("2016-12-25");        //var df = new Date("2016-12-25T12:23:46Z"); ISO formats
+    document.write("<br>" ,df);
+    var df1 = new Date("12/25/2016");       //var df1 = new Date("12/25/2016 10:12");
+    document.write("<br>" ,df1);
+    var df2 = new Date("March 25 2016");
+    document.write("<br>" ,df2);
+
+
+    document.write("<br><br> <b>Date - Get Methods</b>");
+    var dg = new Date();
+    document.write("<br> Day :" ,dg.getDay());
+    document.write("<br> Date :" ,dg.getDate());
+    document.write("<br> Year :" ,dg.getYear());
+    document.write("<br> Month :" ,dg.getMonth());
+    document.write("<br> Time :" ,dg.getTime());
+    document.write("<br> Hours :" ,dg.getHours());
+    document.write("<br> Minutes :" ,dg.getMinutes());
+    document.write("<br> Seconds :" ,dg.getSeconds());
+    document.write("<br> Milliseconds :" ,dg.getMilliseconds());
+    
+
+    document.write("<br><br><b>Date-set Methods</b>");
+    var ds = new Date();
+    // document.write("<br> Day :" ,ds.setDay());
+    ds.setDate(20);
+    ds.setFullYear(2021);
+    ds.setMonth(08);
+    ds.setHours(5);
+    ds.setMinutes(30);
+    ds.setSeconds(45);
+    ds.setMilliseconds(200);
+
+
+    document.write("<br> After setting the date :" ,ds);
+    document.write("<br> Time now in milliseconds :" ,Date.now());
+    document.write("<br> Parse Aug 02, 1982 in milliseconds :" ,Date.parse("Aug 02, 1982"));
+    var msec = Date.now();     //var msec = Date.parse("Aug 02, 1982");
+    var dn = new Date(msec);
+    document.write("<br> Time now :" ,dn);
+
+
+
+</script>
+</head>
+<body>
+<h3>Creation of Date</h3>
+
+
+<br>
+<br>
+<br>
+Javascript-Date 
+
+    - Stores date and time 
+
+    - Provides methods for date / time management 
+
+        - Creation / Modification time 
+
+        - To display current date and time 
+
+        - To measure time
+  
+  
+        
+Creation of Date Object 
+
+    - new Date()
+
+    - new Date( millisecond )
+
+    - new Date ( dateString )
+
+    - new Date 
+
+            (year, month, date, 
+            hour, minute, second, millisecond)
+
+
+
+Date input formats
+                  _______________________________________________________________
+                  |   ISO date      |     "2018-08-21" (International standard) |
+                  ---------------------------------------------------------------
+                  |   Short Date    |     "08/21/2018"                          |
+                  ---------------------------------------------------------------
+                  |   Long Date     |     "Aug 21 2018" or "21 Aug 2018"        |
+                  ---------------------------------------------------------------
+
+
+
+Date-Methods
+
+    - Allow to get and set date objects using local time or UTC time (Universal or GMT)
+
+    - Get Date Methods 
+                    __________________________________________________________ 
+                    |   getFullYear()      |   getMonth()   |   getDate()    |
+                    ----------------------------------------------------------
+                    |   getHours()         |   getMinute()  |   getSeconds() |
+                    ----------------------------------------------------------
+                    |   getMilliseconds()  |   getTime()    |   getDat()     |
+                    ----------------------------------------------------------
+
+
+
+Date-Set Methods 
+                ______________________________________________________________ 
+                |   setDate()          |   setFullYear()   |   setMonth()    |
+                -------------------------------------------------------------- 
+                |   setHours()         |   setMinutes()    |   setTime()     |
+                -------------------------------------------------------------- 
+                |   setSeconds()       |   Date.now()      |   Date.parse()  |
+                -------------------------------------------------------------- 
+                |   setMilliseconds()  |                   |                 |
+                --------------------------------------------------------------
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JS objects</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-compatible" content="ie=edge">
+<script>
+
+    // literals
+
+    var student={};
+    student.name="Harish";
+    student.id=45;
+    student.dept="IT";
+    student.year="1st year";
+    
+    console.log("Literal1 example---> student Name:" +student.name);
+
+    console.log(student);   
+    console.log(student.name);
+    console.log(student.year);
+    
+
+   
+
+    var student1={
+        name:"ragavi",
+        id:26,
+        dept:"cse",
+        year:"2001"
+    }
+    console.log(student1);
+
+
+    // Instance of object
+
+    var lecturer = new Object();
+    lecturer.name="Uday";
+    lecturer.dept="EEE";
+    lecturer.id=56;
+    lecturer.salary=40000;
+
+    console.log("Lecturer name " +lecturer.name + "Dept " +lecturer.dept);
+
+
+    // Constractor
+
+    function lect(name, dept, sal)
+    {
+        this.name=name;
+        this.dept=dept;
+        this.sal=sal;
+    }
+
+    var l1=new lect("Raja", "Cse", 45000);
+    var l2=new lect("Uday", "Civil", 30000);
+    console.log(l1.name);
+    console.log(l2.dept);        //console.log (l2["dept"])
+
+
+
+
+
+
+
+</script>
+</head>
+<body>
+
+
+Javascript-Object 
+
+    - Javascript is an Object Oriented Programming (OOP) language.
+
+    - Object belong to Non-primitive datatype.
+
+    - Object are used to store collections of data and complex entities.
+
+    - Object are composed of properties and methods.
+
+
+Object creation 
+
+    - By object literal
+
+        var objname = {prop1:value1, prop2:value2...propN:valueN}
+
+    - By creating instance of object - new keyword 
+
+        var objname = new Object();
+
+    - By using and object constructors - new keyword 
+
+        To create a function with arguments 
+
+
+Accessing ways 
+
+ways to access the properties and methods of objects 
+
+    - By dot operator - objname.property 
+
+    - Square brackets - objname[property]
+
+
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JS logical operators</title>
+<script>
+    
+    function verify(){
+        var name=document.getElementById("n1").value;
+        var pwd=document.getElementById("pwd").value;
+
+        //  if((name=="Javascript")&&(pwd="Tutorials"))
+        //  {
+        //     document.write("verification done successfully");
+        //  }
+        //  else{
+        //     document.write("verification failed");
+        //  }
+
+        //  if((name=="Javascript")||(name=="JS"))
+        //  {
+        //     document.write("verification done successfully");
+        //  }
+        //  else{
+        //     document.write("verification failed");
+        //  }
+
+         if(!(name=="javascript"))
+         {
+            document.write("Enter javascript as name in the form");
+         }
+         else{
+            document.write("Correct user name");
+         }
+    }
+
+</script>
+</head>
+<body>
+
+    <h1>User details</h1>
+    Enter name
+    <input type="text" name="name1" id="n1"><br>
+
+    Enter Password
+    <input type="text" name="pwd" id="pwd"><br>
+    <input type="submit" value="submit" onclick="verify();">
+    <br>
+
+Logical operators
+                                ______________________________ 
+                                |        Operators           |
+                                ------------------------------
+                                |           &&               |
+                                ------------------------------ 
+                                |           ||               |
+                                ------------------------------ 
+                                |            !               |
+                                ------------------------------ 
+
+
+
+
+
+
+
+</body>
+</html>

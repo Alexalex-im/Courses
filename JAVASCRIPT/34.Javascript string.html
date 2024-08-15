@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JS strings</title>
+<script>
+
+
+    // String as literal
+
+    var topic="Javascript tutorial";
+    var name="string";
+    document.write(topic + "<br>");
+    document.write(name + "<br>");
+    document.write(`Hi we are learning ${name} in ${topic}`);
+
+    document.write("<br> Hi we are learning " +name+ "in " +topic+ "<br>");
+
+    //String as object
+
+    var topic1 = new String("Javascript tutorial 2019 <br>");
+    document.write(topic1+"<br>");
+
+    var str1="strings";
+    var str2 = new String("strings");
+    var str3 = new String("strings");
+
+    (str1==str2)?document.write("equal"):document.write("not equal");
+    document.write("<br>");
+    (str1===str2)?document.write("equal"):document.write("not equal");
+    document.write("<br>");
+
+    (str2==str3)?document.write("equal"):document.write("not equal");
+    document.write("<br>");
+    (str1===str3)?document.write("equal"):document.write("not equal");
+    document.write("<br>");
+
+
+    //special characters 
+
+    document.write('Hello welcome to learn "Javascript" <br>');
+    document.write("Hello welcome to learn \"javascript\"<br>");
+
+    document.write('It\'s easy to learn <br>');
+    document.write('This is \\ backslash character <br>');
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</head>
+<body>
+
+
+
+
+
+
+
+
+Javascript-string 
+
+    - Sequence of characters
+
+    - Used for storing and manipulating text 
+
+    - It is immutable 
+
+            -String cannot be changed in javascript 
+
+            -It is impossible to change a character 
+
+
+String Creation
+
+    - By string literal
+
+    - var stringnam = "stringvalue";
+
+        - zero or more characters written inside single or double quotes or back ticks
+
+    - By string object (new keyword)
+
+    - var stringname = new String("stringvalue");
+
+        - new keyword is used to create instance of string 
+
+Special characters
+
+    - \',\" - Quotes 
+
+    - \\ - Backslash
+
+    - \t - tab 
+
+    - \n - newline
+</body>
+</html>

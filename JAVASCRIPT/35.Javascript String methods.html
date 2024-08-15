@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JS String Methods</title>
+<script>
+
+    var str="A penny saved is a penny earned.";
+    var str1="Programming   Line -   Rakesh   ";
+    var txt1="Programming";
+    var txt2="line";
+    document.write(str);
+
+    //property
+    document.write("<br> length :" +str.length);
+    document.write("<br>");
+    // Methods
+    document.write("<br>3rd character :"+str.charAt(3));
+    document.write("<br>");
+
+    document.write("<br> 3rd unicode character :" +str.charCodeAt(3)+"<br>");
+    document.write("<br>");
+
+    document.write("<br> concadenation :" +txt1.concat(" ", txt2));
+    document.write("<br>");
+
+    document.write("<br> Index of the string penny :" +str.indexOf("penny"));
+    document.write("<br>");
+
+    document.write("Last Index of the string penny :" +str.lastIndexOf("penny"));
+    document.write("<br>");
+
+    document.write("<br> Upper case :" +str.toUpperCase());
+    document.write("<br>");
+
+    document.write("<br> Lower case :" +str.toLowerCase());
+    document.write("<br>");
+
+    document.write("<br> Comparing of Australia and Australia :" + "Australia".localeCompare("Australia"));
+    document.write("<br>");
+
+    document.write("<br> slice of the string :" +str.slice(-5));
+    document.write("<br>");
+
+    document.write("<br> substr :" +str.substr(3,7));
+    document.write("<br>");
+
+    document.write("<br> substring :" +str.substring(0,4));
+    document.write("<br>");
+
+    document.write("<br> search - Earned :" +str.search("earned"));
+    document.write("<br>");
+
+    document.write("<br> Match 'we' :" +str.match("we"));
+    document.write("<br>");
+
+    document.write("<br> Split :" +str.split(" "));
+    document.write("<br>");
+
+    document.write("<br> Replace :" +str.replace("penny", "Money"));
+    document.write("<br>");
+
+    document.write("<br> trim :" +str1.trim());
+    document.write("<br>");
+    
+    document.write("<br> tostring :" +str.toString())
+    document.write("<br>");
+
+    document.write("<br> Value of :" +str.valueOf())
+    document.write("<br>");
+
+
+</script>
+</head>
+<body>
+<br>
+<br>
+    String methods and Properties
+
+    - String property - length
+
+    - String Methods 
+
+             1.CharAt()          2.CharCodeAt()          3.Concat()
+             4.IndexOf()         5.LastIndexOf()         6.LocaleCompare()
+             7.Match()           8.Replace()             9.Search()
+             10.Slice()          11.Split()              12.Substr()
+             13.SubString()      14.Trim()               15.ToUpperCase()
+             16.ToString()       17.ValueOf()            18.ToLowerCase
+
+
+Summary 
+
+    - To get a substring - slice() / substr() / subString()
+
+    - To case change - toLowerCase() / toUpperCase() 
+
+    - To look for a Substring - indexOf() / lastIndexOf()
+
+    - To Compare string - localeCompare()
+
+    - To extract string characters - charAt() / charCodeAt()
+
+    - To Remove white space both sides - trim()
+
+
+
+
+</body>
+</html>

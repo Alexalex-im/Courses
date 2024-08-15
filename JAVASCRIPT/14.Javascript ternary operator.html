@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>conditional operators</title>
+<script>
+
+    function check(){
+        var name=document.getElementById("n1").value;
+        var mark=document.getElementById("m1").value;
+
+        (mark>=35)? document.write(name+"pass") : document.write(name+"Fail");
+
+    }
+
+
+</script>
+</head>
+<body>
+
+<h4>Student Details</h4>
+Enter name
+<input type="text" name="name1" id="n1"><br><br>
+Enter mark
+<input type="number" name="mark" id="m1"><br><br>
+<input type="submit" value="check" onclick="check();">
+
+
+
+
+Conditional operators 
+
+    - <condition> ? <value1> : <value2>
+
+</body>
+</html>

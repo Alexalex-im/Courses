@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-compatible" content="ie=edge">
+
+<title>JS Window Navigator</title>
+<script>
+        // navigation
+
+        document.writeln("<br> Browser Name :" +navigator.appName);
+        document.write("<br>");
+
+        document.writeln("<br> Application code name :" +navigator.appCodeName);
+        document.write("<br>");
+
+        document.writeln("<br> Application version :" +navigator.appVersion);
+        document.write("<br>");
+
+        document.writeln("<br> Is cookie Enabled ? :" +navigator.cookieEnabled);
+        document.write("<br>");
+
+        document.writeln("<br> Language Used :" +navigator.language);
+        document.write("<br>");
+
+        document.writeln("<br> User Agent :" +navigator.userAgent);
+        document.write("<br>");
+
+        document.writeln("<br> Platform Used :" +navigator.platform);
+        document.write("<br>");
+
+        document.writeln("<br> online ? :" +navigator.onLine);
+        document.write("<br>");
+
+        document.writeln("<br> Is Java Enabled ? :" +navigator.javaEnabled);
+        document.write("<br>");
+
+
+        // Location 
+
+        document.write("<br> Href :" +window.location.href);
+
+        // protocol like http: or https:
+        document.write("<br> Href :" +window.location.host);
+
+        // protocol with port like localhost or localhost:3000
+        document.write("<br> Href :" +window.location.host);
+
+        // hostname like localhost or www.example.com
+        document.write("<br> Host name :" +window.location.hostname );
+
+        // port number like 3000
+        document.write("<br> Port Number :" +window.location.port);
+
+        // pathname like / products / search.php
+        document.write("<br> Path name :" +window.location.pathname);
+
+
+        //methods
+        function loadPage(){
+            window.location.assign("https://www.annauniv.edu");
+        }
+
+        function replacePage(){
+            window.location.replace("www.google.com");
+        }
+
+        function reloadPage(){
+            window.location.reload(true);
+        }
+
+</script>
+<br>
+<br>
+<br>
+<input type="button" value="Load Page" onclick="loadPage();">
+<br>
+<input type="button" value="Replace Page" onclick="replacePage();">
+<br>
+<input type="button" value="Reload Page" onclick="reloadPage();">
+
+
+
+</head>
+<body>
+<br>
+<br>
+<br>
+
+Javascript-Window navigator 
+
+    - Used for browser detection 
+
+    - Used to get browser information such as browser name, application code name etc
+
+    - method-javascript-javaEnabled()
+
+    - Properties 
+            _______________________________________
+            |  appName          |  appVersion     |
+            ---------------------------------------
+            |  appCodeName      |  CookieEnabled  |
+            ---------------------------------------
+            |  platform         |  onLine         |
+            ---------------------------------------
+            |  userAgent        |  language       |
+            ---------------------------------------
+
+
+
+Location Object 
+
+    - Used to get the current page address ( URL ) and redirect the browser to a new page 
+
+    - Properties 
+            _____________________________
+            |  href      |  protocol    |
+            ----------------------------- 
+            |  host      |  port        |
+            -----------------------------
+            |  hostName  |  pathName    |
+            -----------------------------
+
+    - Method 
+
+        - assign()
+
+        - replace()
+
+        - reload()
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

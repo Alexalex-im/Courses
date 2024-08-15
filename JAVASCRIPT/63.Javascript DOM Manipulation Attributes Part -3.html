@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JS DOM Manipulation Attributes Part - 3</title>
+<style>
+    .divst{
+        width:250px;
+        height:500px;
+        background:blue;
+    }
+
+
+
+
+
+
+
+
+</style>
+<!-- <script>
+        function getAt(){
+
+            var link = document.getElementById("mylink");
+            var href = link.getAttribute("href");
+            alert("link goes to" +href);
+
+            var tar = link.getAttribute("target");
+            alert("Link open in "+tar);
+        }
+
+        function setAt(){
+            var link1 = document.getElementById("link2");
+            link1.setAttribute("href", "https://www.annauniv.edu");
+        }
+
+        function deleteAt(){
+            var link2 = document.getElementById("link3");
+            link2.removeAttribute("href");
+        }
+
+</script> -->
+</head>
+<body>
+
+<div>
+<h3>DOM - Get Attribute, set Attribute </h3>
+<a href="https:www.google.com" target="_blank" id="mylink">Google</a>
+<a href="#" id="link2">Anna University</a>
+<a href="https://www.youtube.com" id="link3">Youtube</a>
+</div>
+<br>
+<button onclick="getAt();">Get Attribute</button>
+<button onclick="setAt();">set Attribute</button>
+<button onclick="deleteAt();">Remove Attribute</button>
+
+<br>
+<h3>DOM - Get Attribute, set Attribute examples</h3>
+Programming Line 
+<input type="text" id="txt" value="">
+
+<script>
+    document.getElementById("txt").setAttribute("value","JavaScript Tutorial");
+    var element = document.createElement("div");
+    element.setAttribute("class", "divst");
+    document.body.appendChild(element);
+</script>
+
+
+
+
+
+
+
+
+
+<br>
+<br>
+<br>
+JS - DOM Manipulation 
+
+    - getAttribute()
+
+        - Used to get current value of a attribute of an element in the HTML document 
+
+    - setAttribute()
+
+        - Used to add or update the value of an existing attribute on an HTML document.
+
+    - removeAttribute()
+
+        - Used to remove an Attribute from the specified element.    
+
+
+</body>
+</html>

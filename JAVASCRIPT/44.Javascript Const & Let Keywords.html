@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-compatible" content="ie=edge">
+<title>JS const and let keyword </title>
+<script>
+
+        //Global scope 
+        var channel = "programming line";
+        function display(){
+            document.write("<br>" ,channel);
+        }
+        display();
+        document.write("<br>" ,channel);
+        
+
+
+        // Function scope
+        function show(){
+            var name = "Rakesh";
+            document.write("<br>" ,name);
+        }
+        show();
+
+
+        // Block scope
+        {
+            var x=10;
+            document.write("<br>" ,x);
+        }
+        document.write("<br>" ,x);
+
+
+        // Loop Scope
+        for(var i=10; i>0 ; i--){
+
+            let z=10;  // var x=10;
+            document.write("<br>" ,i);
+        }
+        // document.write("<br>" ,z);          //document.write("<br>" ,i);
+        document.write("<br>" ,window.z);
+
+
+        // Redeclaring the variable 
+        var x = 100;           // let x = 100; - already defined
+        document.write("<br>" ,x);
+
+
+        // hoisting
+
+        flag = true;
+        document.write("<br>" ,flag);
+        var flag;          //let flag; - not suitable for let
+
+
+        // const
+        const PI = 3.14;
+        const CName = {name:"programming line",
+                       subject:"Javascript",
+                       author:"Rakesh"};
+        console.log(CName);
+        // const CName = {name:"programming line",
+        //                subject:"Html",
+        //                author:"Rakesh"};
+        CName.subject="Html";
+        console.log(CName);
+        const cLang=["html" ,"Javascript" ,"css"];
+        console.log(cLang);
+        cLang[0]="c";
+        cLang.push("JQuery");
+        console.log(cLang);
+
+</script>
+</head>
+<body>
+<br>
+<br>
+<br>
+
+Javascript-let,const 
+
+    - Var, let, const are the way to declare variables in Javascript 
+                 _______________________________________________
+                 |   Global Scope  |    Function Scope         |  
+                 -----------------------------------------------  
+                 |   Block Scope   |    Redeclaring variable   |
+                 -----------------------------------------------
+                 |   Loop Scope    |    Hoisting               |  
+                 -----------------------------------------------    
+
+    - Var cannot have block scope 
+
+
+
+Difference between let and var 
+
+    - Redeclaring variable 
+
+    - Loop scope 
+
+    - Global variable in HTML 
+
+
+
+
+
+
+
+</body>
+</html>

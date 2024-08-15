@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>javascript typecasting &type conversion</title>
+
+<script>
+    // document.write(10 +"5");
+    // document.write("<br>");
+    // document.write(typeof (10+"5"));
+    // document.write("<br><br><br><br>");
+
+    // document.write(10 *"5");
+    // document.write("<br>");
+    // document.write(typeof (10*"5"));
+    // document.write("<br><br><br><br>");
+
+    // document.write(10+20.8);
+    // document.write("<br>");
+    // document.write(typeof (10+20.8));
+    // document.write("<br><br><br><br>");
+
+    // document.write(10*"hello");
+    // document.write("<br>");
+    // document.write(typeof (10*"hello"));
+    // document.write("<br><br><br><br>");
+
+    // /* Explicit comment*/
+    // var name="JS titorial", num1='78', num2=20;
+    // var value=100,x;
+
+    // document.write(String(value));
+    // document.write("<br>");
+    // document.write(typeof(String(value)));
+    // document.write("<br>");
+
+    // document.write(Number(num1));
+    // document.write("<br>");
+    // document.write(typeof(Number(num1)));
+    // document.write("<br>");
+
+    // document.write(Number(num1));
+    // document.write("<br>");
+    // document.write(typeof(Number(num1)));
+    // document.write("<br>");
+
+    // document.write(Number("hello"));
+    // document.write("<br>");
+    // document.write(typeof(Number("hello")));
+    // document.write("<br>");
+
+    // document.write(Boolean(num1));
+    // document.write("<br>");
+    // document.write(typeof(Boolean(num1)));
+    // document.write("<br>");
+
+    // document.write(Boolean(""));
+    // document.write("<br>");
+    // document.write(typeof(Boolean("")));
+    // document.write("<br>");
+    
+    // x=num2.toString();
+    // document.write(x);
+    // document.write("<br>");
+    // document.write(typeof(x));
+    // document.write("<br>");
+
+    // x=num2.toString(2);
+    // document.write(x);
+    // document.write("<br>");
+    // document.write(typeof(x));
+    // document.write("<br>");
+
+    // x=num2.toString(8);
+    // document.write(x);
+    // document.write("<br>");
+    // document.write(typeof(x));
+    // document.write("<br>");
+
+    // x=num2.toString(16);
+    // document.write(x);
+    // document.write("<br>");
+    // document.write(typeof(x));
+    // document.write("<br>");
+
+    function check(){
+        var emp_name = document.getElementById("n1").value;
+        var emp_age = document.getElementById("ag").value;
+        var phone_number = document.getElementById("ph").value;
+        var emp_exp = document.getElementById("exp").value;
+        var age, exper, phone;
+        document.write("name of the employee" + emp_name);
+        document.write("<br>");
+        document.write("data type of name:" +(typeof emp_name));
+        document.write("<br><br><br>");
+
+        document.write("Employee age" + emp_age);
+        document.write("<br>");
+        document.write("data type of age" + (typeof emp_age));
+        document.write("<br><br><br>");
+
+        document.write("phone number" + phone_number);
+        document.write("<br>");
+        document.write("data type of phoneno" +(typeof phone_number));
+        document.write("<br><br><br>");
+
+        document.write("work experience" + emp_exp);
+        document.write("<br>");
+        document.write("data types of work experience" + (typeof emp_exp));
+        document.write("<br>");
+
+        age=parseInt(emp_age);
+        document.write(age);
+        document.write("<br>");
+        document.write(typeof age);
+        document.write("<br>");
+        document.write("<br>");
+
+        phone=parseInt(phone_number);
+        document.write(phone);
+        document.write("<br>");
+        document.write(typeof phone_number);
+        document.write("<br>");
+        document.write("<br>");
+
+        exper=parseFloat(emp_exp);
+        document.write(exper);
+        document.write("<br>");
+        document.write(typeof exper);
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+</script>
+
+</head>
+<body>
+
+<h5>Type conversion examples</h5>
+
+<h2>Employees Details</h2>
+
+
+    Enter employee name
+        <input type="text" name="name1" id="n1"><br>
+    Enter age
+        <input type="number" name="age" id="ag"><br>
+    Enter phone number
+        <input type="number" name="phonenumber" id="ph" value=""><br>
+    Enter Work experience
+        <input type="number" name="exp" id="exp" ><br>
+    <br>
+        <input type="submit" value="submit" onclick="check();">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+Javascript-type conversions
+
+    - Implicit conversion 
+
+    - Explicit conversion 
+
+
+Implicit conversion 
+
+    - Done automatically by javascript engine
+
+    Eg:
+      - document.write(2+'5') // 25
+      - document.write(20*'2') // 40
+
+
+Explicit conversion
+
+    - String()
+
+    - Number()
+
+    - Boolean()
+
+    - ParseInt()
+
+    - ParseFloat()
+
+    -ToString()
+
+
+</body>
+</html>

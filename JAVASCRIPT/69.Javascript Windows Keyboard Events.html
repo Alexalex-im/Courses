@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JS Window Keyboard Events</title>
+<style>
+    body{
+        background-color:burlywood;
+    }
+
+    p{
+        font-size:20px;
+        color:midnightblue;
+    }
+</style>
+<script>
+
+    function myUp(){
+        var val = document.getElementById('occu');
+        val.value = val.value.toUppercase();
+    }
+
+    function myPress(){
+        alert("key is pressed inside the name field");
+    }
+
+    function myDown(event){
+        alert("Ascii code :" +event.keyCode);
+    }
+
+    function myClrdown(){
+        document.getElementById('brch').style.backgroundColor="red";
+    }
+
+    function myClrup(){
+        document.getElementById("brch").style.backgroundColor="green";
+    }
+
+    function resizeWin(){
+        var wid = window.outerWidth;
+        var hig = window.outerHeight;
+        var siz = "window width = " +wid+ "Height = " +hig;
+        document.getElementById('display').innerHTML=siz; 
+    }
+
+    function unloadFun()
+    {
+        alert("bye");
+    }
+
+    function loadFun()
+    {
+        alert("Page is loaded successfully");
+    }
+    
+
+</script>
+</head>
+<body onload="loadFunc()" onunload="unloadFun()" onresize="resizeWin()">
+<h1>Javascript - Window Events</h1>
+<p id="display"></p>
+<a href="#"> Click here to go to another site</a>
+
+<h1>Javascript - Keyboard Events </h1>
+
+<table>
+    <tr>
+        <td>Enter your name</td>
+        <td><input type="text" id="name" onkeypress="myPress();"></td>
+    </tr>
+
+    <tr>
+        <td>Enter your age </td>
+        <td><input type="number" id="age" onkeydown="myDown(event);"></td>
+    </tr>
+
+    <tr>
+        <td>Enter your occupation</td>
+        <td><input type="text" id="occu" onkeyup="myUp();"></td>
+    </tr>
+
+    <tr>
+        <td>Branch</td>
+        <td><input type="text" id="brch" onkeyup="myClrup();" onkeydown="myClrdown();"></td>
+    </tr>
+
+</table>
+
+
+
+
+<br>
+<br>
+<br>
+Window Events 
+
+    - Load 
+
+    - Unload 
+
+    - Resize
+
+KeyBoard Events 
+
+    - KeyPress 
+
+    - KeyUp 
+
+    - KeyDown
+
+
+</body>
+</html>

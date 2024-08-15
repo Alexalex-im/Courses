@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-compatible" content="ie=edge">
+
+<title>JS Browser Object Model ( BOM )</title>
+<style>
+    input{
+        color:white;
+        background-color:blue;
+        border-radius:3px;
+        border:none;
+        text-align:center;
+    }
+</style>
+<script>
+
+        // window property 
+        function prop(){
+        var width = window.innerWidth;
+        var height = window.innerHeight;
+        document.write(" Width : "+width+ " Height :" +height);
+        }
+        prop();
+
+
+        // window method
+        function openW(){
+            window.open("http://www.annauniv.edu");
+        }
+
+        function openMyWin(){
+            mywin = window.open(" ", " mywin ", " width = 200, height = 300");
+        }
+
+        function moveWin(){
+            mywin.moveTo(500,100);
+            mywin.focus();
+        }
+
+        function resizeWin(){
+            mywin.resizeTo(100,250);
+            mywin.focus();
+        }
+
+        function closeWin(){
+            mywin.close();
+        }
+
+        function timeoutWin(){
+            setTimeout(function(){
+                document.write("<br> welcome to programming line in 2 seconds");
+            }, 2000);
+        }
+
+</script>
+Open website<input type="button" value="open" onclick="openW();">
+<br>
+To open new window<input type="button" value="open mine" onclick="openMyWin();">
+<br>
+To move window<input type="button" value="move" onclick="moveWin();">
+<br>
+To resize window<input type="button" value="resize" onclick="resizeWin();">
+<br>
+Close window<input type="button" value="close" onclick="closeWin();">
+<br>
+set timeout<input type="button" value="timer" onclick="timeoutWin();">
+</head>
+<body>
+
+<br>
+<br>
+<br>
+
+Javascript-BOM 
+
+    - Browser object model 
+
+    - Used to interact with browser 
+    
+    - default object is window 
+
+
+                                 -------------                                 --------------
+                                /             \                               /              \
+                               /               \                             /                \
+                              /   Document      \      ---------------      /    History       \
+                              \                 /     /               \     \                  /
+                               \               /     /                 \     \                /
+                                \             /     /                   \     \              /
+                                 -------------     /        Window       \     --------------
+                                    /      \       \                     /        /      \
+                                 -------------      \                   /      --------------
+                                /             \      \                 /      /              \
+                               /               \      \               /      /                \
+                              /   Location      \      ---------------      /    Screen        \
+                              \                 /                           \                  /
+                               \               /       ---------------       \                /
+                                \             /       /               \       \              /
+                                 -------------       /                 \       --------------
+                                                    /    Navigator      \
+                                                    \                   /
+                                                     \                 /
+                                                      \               /
+                                                       ---------------
+
+
+Window object 
+
+    - Represent window in browser 
+
+    - Window is the object of browser 
+
+    - All global functions, object, variable become members of the window object 
+
+    - Document object is the property of window object 
+
+
+Window-Properties, Methods
+
+    - Properties 
+
+        - innerHeight
+
+        - innerWidth
+
+            - To determine the size of the browser. 
+
+    - Methods 
+
+        - open() - Open a new window 
+
+        - close() - Close the current window 
+
+        - moveTo() - Move the current window 
+
+        - resizeTo() - Resize the current window 
+
+        - setTimeout() - Performs action after specified time like evaluating expression etc.
+
+
+</body>
+</html>

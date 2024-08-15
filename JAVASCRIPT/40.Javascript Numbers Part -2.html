@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JS Number part -2</title>
+<script>
+
+
+    var a = "50";
+    var b = "50.25";
+    var c = "String";
+    document.write("<br> <b> Conversion of variables to numbers</b>");
+    document.write("<br>" +Number.parseFloat(a)+"<br>");
+    document.write(Number.parseFloat(b)+"<br>");
+    document.write(Number.parseFloat(c)+"<br>");
+
+    document.write("<br>" +Number.parseInt(a)+"<br>");
+    document.write(Number.parseInt(b)+"<br>");
+    document.write(Number.parseInt(c)+"<br>");
+
+    document.write("<br>" +Number(true));      //return 1
+    document.write("<br>" +Number(false));     //return 0
+    document.write("<br>" +Number("10"));      //return 10
+    document.write("<br>" +Number("HI"));
+
+
+    var exnum = 32;
+    document.write("<br> Decimal :" +exnum.toString(10));   //return 32
+    document.write("<br> Hexadecimal :" +exnum.toString(16));   //return 20
+    document.write("<br> Octal :" +exnum.toString(8));          //return 40
+    document.write("<br> Binary :" +exnum.toString(2));         //return 100000
+
+
+    document.write("<br> type of :" +typeof(exnum.toString(10)));
+
+
+    var xy = 100 / "Apple";
+    document.write("<br> checking for not a number? " ,isNaN(xy));
+
+    //Boolean
+    
+    var flag = new Boolean(true); 
+    var status = false;
+
+    document.write("<br> toString :" ,flag.toString());
+    document.write("<br> Value of :" ,status.valueOf());
+
+    //
+    function readNumber(){
+        var num;
+
+        do {
+
+            num = prompt("Enter a number please ?" ,0);
+        }while(!isFinite(num));
+
+        if(num===null || num === "")
+        {
+            return null;
+        }
+
+        return +num;
+
+    }
+    alert(`Read: ${readNumber()}`);
+    //alert("Read :" +readNumber());
+
+
+
+
+
+
+
+
+</script>
+</head>
+<body>
+<br>
+<br>
+<br>
+Javascript-Boolean 
+
+    - Boolean represents two values - true or false 
+
+    - Methods 
+
+        - toSource()
+
+        - toString() 
+
+        - valueOf()
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-compatible" content="ie=edge">
+<title>JS strict mode</title>
+</head>
+<body>
+    <script>
+        'use strict';
+
+        var x=10;      //  x=10; 
+        var obj1 = new Object();
+        document.write(x);
+        obj1 = {name:"programming Line" ,Author:"Rakesh"};
+        console.log(obj1);
+
+        
+        function display(){
+            // 'use strict';
+            var y=20;
+            document.write("<br>" ,y);
+        }
+        display();
+
+        function show(x, y){        // function show(x, x)
+            y=20;
+            document.write("<br> Hello");
+        }
+        show();
+
+        var eval1 = 5;
+        document.write("<br>" ,eval1);
+
+        var argument1 = 24;
+        document.write("<br>" ,argument1);
+
+        
+        function showname(){
+            alert(this);
+        }
+        showname();
+
+        // delete x;
+        // delete obj1;
+        // delete showname();
+
+</script>
+<br>
+<br>
+<br>
+Javascript-Strict Mode 
+
+    - "use  strict"; - Javascript code should be executed in strict mode. 
+
+    - Modern browsers only support strict mode. 
+
+    - Included to the beginning of a script or a function will be recognized.
+
+
+Use of strict Mode 
+
+    - It makes to write secure javascript 
+
+    - Changes previously accepted bad syntax into real errors.
+
+
+Strict Mode 
+
+    - Using a variable without declaring is not allowed 
+
+    - Using an object without declaring is not allowed 
+
+    - Deleting a variable, an object, a function is not allowed 
+
+    - Duplicating parameter name is not allowed 
+
+    - Word eval, arguments cannot be used as variable names 
+
+    - "this" keyword in functions behaves differently in strict mode
+
+</body>
+</html>

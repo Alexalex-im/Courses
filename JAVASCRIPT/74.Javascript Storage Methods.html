@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JS Storage Methods</title>
+<script>
+
+    function entry(){
+
+        var name = document.getElementById("cname").value;
+        localStorage.setItem("customerName :",name);
+        var num = document.getElementById("cno").value;
+        localStorage.setItem("customerNo",num);
+        var prod = document.getElementById("pname").value;
+        localStorage.setItem("ProductName", prod);
+        var bran = document.getElementById("brnch").value;
+        localStorage.setItem("branchName" ,bran);
+
+        
+    }
+
+
+
+
+
+
+</script>
+</head>
+<body bgcolor="82caff">
+
+<h3>Local Storage example</h3>
+
+<p>Local Storage is used to pass values from one page to another page</p>
+
+<form action="display_1s.html">
+
+    <h4>Customer Details</h4>
+
+    Enter the following details 
+    <table border="0">
+        <tr><td>Customer name</td><td><input type="text" id="cname"></td></tr>
+        <tr><td>Customer ID</td><td><input type="text" id="cno"></td></tr>
+        <tr><td>Product name</td><td><input type="text" id="pname"></td></tr>
+        <tr><td>Company branch</td><td><input type="text" id="brnch"></td></tr>
+        <tr><td></td><td><button id="clck" onclick="entry();">Submit</button></td></tr>
+    </table>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

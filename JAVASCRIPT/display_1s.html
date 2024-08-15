@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Output</title>
+<script>
+
+        var name = localStorage.getItem("customerName");
+        document.getElementById("n1").innerHTML=name;
+        document.getElementById("n2").innerHTML=name;
+        var num = localStorage.getItem("customerNo");
+        document.getElementById("no").innerHTML=num;
+        var prodt = localStorage.getItem("productName");
+        document.getElementById("product").innerHTML=prodt;
+        var bran = localStorage.getItem("branchName");
+        document.getElementById("branch").innerHTML=bran;
+    
+
+
+
+
+</script>
+</head>
+<body bgcolor="FF7F50">
+
+<h2>Local storage example - passing values between pages</h2>
+
+<h4>Welcome <span id="n1"></span>!</h4>
+
+Details of the customer:
+
+Thanks for purchasing our product. Please verify the details.
+
+<br>
+<br>
+Name : <span></span><br>
+ID : <span id="no"></span><br>
+Product purchased : <span id="product"></span><br>
+In Branch : <span id="branch"></span><br>
+
+
+
+
+</body>
+</html>

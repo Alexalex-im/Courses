@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JS Math object & functions </title>
+
+<script>
+        function displayAbs(){
+            var num1 = document.getElementById("num").value;
+            document.getElementById("l1").innerHTML=Math.abs(num1);
+        }
+
+        function displayCeil(){
+            var num1 = document.getElementById("ceil1").value;
+            document.getElementById("l2").innerHTML=Math.ceil(num1);
+        }
+
+        function displayFlr(){
+            var num1 = document.getElementById("Flr").value;
+            document.getElementById("l3").innerHTML=Math.floor(num1);
+        }
+
+        function displayMax(){
+            var num1 = [12, 34, 3, 56, 78, 30];
+            document.getElementById("l4").innerHTML=Math.max(...num1);   //document.getElementById("l4").innerHTML=Math.max(2, 3, 45, 21, 34);
+        }
+
+        function displayMin(){
+            var num1 = [12, 34, 3, 56, 78, 30];
+            document.getElementById("l5").innerHTML=Math.min(...num1);
+        }
+
+        function displaySqrt(){
+            var num1 = document.getElementById("Sqrt").value;
+            document.getElementById("l6").innerHTML=Math.sqrt(num1);
+        }
+
+        function displayRound(){
+            var num1 = document.getElementById("Round").value;
+            document.getElementById("l7").innerHTML=Math.round(num1);
+        }
+
+        function displayPow(){
+            var num1 = document.getElementById("Base").value;
+            var num2 = document.getElementById("Expo").value;
+
+            document.getElementById("l8").innerHTML=Math.pow(num1,num2);   
+        }
+        
+        function displayLog(){
+            var num1 = document.getElementById("Log").value;
+            document.getElementById("l9").innerHTML=Math.log(num1);
+        }
+
+        function displayTrun(){
+            var num1 = document.getElementById("Trunc").value;
+            document.getElementById("l10").innerHTML=Math.trunc(num1);
+        }
+
+        function displaySign(){
+            var num1 = document.getElementById("Sign").value;
+            document.getElementById("l11").innerHTML=Math.sign(num1);
+        }
+
+        function displayExp(){
+            var num1 = document.getElementById("Exp").value;
+            document.getElementById("l12").innerHTML=Math.exp(num1);
+        }
+
+        function displayRnd(){
+            document.getElementById("l13").innerHTML=Math.floor(Math.random() * 10);
+        }
+
+        function displayCbrt(){
+            var num1 = document.getElementById("Cbrt").value;
+            document.getElementById("l14").innerHTML=Math.cbrt(num1);
+        }
+
+</script>
+
+
+
+</head>
+<body>
+<!-- <h2>Javascript Math Constants</h2>
+<p id="mathProp"></p>
+<script>
+    document.getElementById("mathProp").innerHTML=
+    "<p> <b>Math E : </b>" +Math.E+ "</p>"+
+    "<p> <b>Math PI : </b>" +Math.PI+ "</p>"+
+    "<p> <b>Math square root of 2 : </b>" +Math.SQRT2+ "</p>"+
+    "<p> <b>Math square root of 1/2 : </b>" +Math.SQRT1_2+ "</p>"+
+    "<p> <b>Math natural logarithm of 2 : </b>" +Math.LN2+ "</p>"+
+    "<p> <b>Math natural logarithm of 10 : </b>" +Math.LN10+ "</p>"+
+    "<p> <b>Math base 2 logarithm of E : </b>" +Math.LOG2E+ "</p>"+
+    "<p> <b>Math base 10 logarithm of E : </b>" +Math.LOG10E+ "</p>";
+</script> -->
+
+<h2>Math-Methods</h2>
+<form>
+    Enter a number to find absolute :
+    <input type="text" id="num">
+    <input type="button" value="Abs" onclick="displayAbs();">
+    <label id="l1"></label><br><br>
+
+    Enter a number to find ceil :
+    <input type="text" id="ceil1">
+    <input type="button" value="ceil" onclick="displayCeil();">
+    <label id="l2"></label><br><br>
+
+    Enter a number to find floor :
+    <input type="text" id="Flr">
+    <input type="button" value="Floor" onclick="displayFlr();">
+    <label id="l3"></label><br><br>
+
+    
+    To find max of an array [12, 34, 3, 56, 78, 30] :
+    <input type="button" value="Max" onclick="displayMax();">
+    <label id="l4"></label><br><br>
+
+    To find min of an array [12, 34, 3, 56, 78, 30] :
+    <input type="button" value="Min" onclick="displayMin();">
+    <label id="l5"></label><br><br>
+
+    Enter a number to find Square root :
+    <input type="text" id="Sqrt">
+    <input type="button" value="SQRT" onclick="displaySqrt();">
+    <label id="l6"></label><br><br>
+
+    Enter a number to find round :
+    <input type="text" id="Round">
+    <input type="button" value="Round" onclick="displayRound();">
+    <label id="l7"></label><br><br>
+
+    To find Power :
+    Base :<input type="number" id="Base">
+    Exp :<input type="number" id="Expo">
+    <input type="button" value="Power" onclick="displayPow();">
+    <label id="l8"></label><br><br>
+
+    Enter a number to find log :
+    <input type="text" id="Log">
+    <input type="button" value="log" onclick="displayLog();">
+    <label id="l9"></label><br><br>
+
+    Enter a number to find Trunc :
+    <input type="text" id="Trunc">
+    <input type="button" value="Trunc" onclick="displayTrun();">
+    <label id="l10"></label><br><br>
+
+    Enter a number to find sign :
+    <input type="text" id="Sign">
+    <input type="button" value="Sign" onclick="displaySign();">
+    <label id="l11"></label><br><br>
+
+    Enter a number to find Exponent :
+    <input type="text" id="Exp">
+    <input type="button" value="Exponent" onclick="displayExp();">
+    <label id="l12"></label><br><br>
+
+    To find the Random (1 - 10) :
+    <input type="button" value="Random" onclick="displayRnd();">
+    <label id="l13"></label><br><br>
+
+    Enter a number to find Cube root :
+    <input type="text" id="Cbrt">
+    <input type="button" value="Cuberoot" onclick="displayCbrt();">
+    <label id="l14"></label><br><br>
+
+
+</form>
+
+
+
+<br>
+<br>
+<br>
+Javascript-Math 
+
+    - Allow to perform mathematical task on numbers 
+
+    - Math Properties (Constants)
+                ____________________________________________________________
+                |  Math.E     |  Math.PI     |  Math.SQRT2  |  Math.SQRTI_2| 
+                ------------------------------------------------------------
+                |  Math.LN2   |  Math.LN10   |  Math.LOG2E  |  Math.LOG10E |
+                ------------------------------------------------------------
+
+
+ Math-Methods 
+              _____________________________________________________________________
+              |   abs(x)        |    acos(x)      |    asin(x)   |    atan2(y,x)  |
+              --------------------------------------------------------------------- 
+              |   ceil(x)       |    cos(x)       |    sin(x)    |    tan(x)      |
+              --------------------------------------------------------------------- 
+              |   floor(x)      |    sinh(x)      |    cosh(x)   |    tanh(x)     |
+              ---------------------------------------------------------------------
+              |   max(x,y...n)  |    min(x,y...n) |    pow(x,y)  |    random()    |
+              --------------------------------------------------------------------- 
+              |   round(x)      |    exp(x)       |    sqrt(x)   |    cbrt(x)     |
+              ---------------------------------------------------------------------
+              |   sign(x)       |    trun(x)      |    log(x)    |                |
+              ---------------------------------------------------------------------
+
+
+
+
+</body>
+</html>

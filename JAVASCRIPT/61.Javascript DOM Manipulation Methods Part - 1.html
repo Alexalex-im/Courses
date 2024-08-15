@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JS DOM Manipulation Methods Part - 1</title>
+<script>
+
+
+    function newElement(){
+        var newpara = document.createElement("p");
+        var content = document.createTextNode("Computer Programming Language"); 
+        newpara.appendChild(content);
+
+        var maindiv = document.getElementById("first");
+        // document.body.appendChild(newpara, maindiv);
+        // document.body.insertBefore(newpara, maindiv);
+        // maindiv.insertAdjacentElement("beforebegin" ,newpara);  // maindiv.insertAdjacentElement("beforeend" ,newpara);
+    }
+
+
+
+
+
+
+</script>
+</head>
+<body>
+
+<h3>Create element, Append child, Create Text Node Example </h3>
+
+<!-- before begin -->
+<div id="first">
+    <!-- after begin -->
+<h5 id="title">Programming Line </h5>
+<p id="author">Owned by Rakesh</p>
+<!-- before end -->
+</div>
+<!-- after end -->
+<button type="button" onclick="newElement();">Insert Element</button>
+
+
+
+<br>
+<br>
+<br>
+DOM Manipulating 
+
+    - createElement()
+
+    - createTextNode()
+
+    - appendChild()
+
+    - replaceChild()
+
+    - childElementCount()
+
+    - removeChild()
+
+    - getAttribute()
+
+    - setAttribute()
+
+
+JS - DOM Manipulation 
+
+    - createElement()
+
+        - Used to create a new element to an HTML document 
+
+    - appendChild()
+
+        - Used to add the new element at the end of any node  
+
+    - createtextNode()
+
+        - Used to add text to that new element 
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

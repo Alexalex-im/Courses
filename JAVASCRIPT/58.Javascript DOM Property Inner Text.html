@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JS DOM Property Inner Text</title>
+<script>
+
+    // var para = document.getElementById("para1");
+    // console.log ( para.innerText );
+
+    function msg(){
+        var char1;
+        var len = document.form1.pass.value.length;
+        if( len>5)
+        {
+            char1 = "good";
+        }else{
+            char1 = "poor";
+        }
+        document.getElementById("str").innerText=char1;
+    }
+
+    function show(){
+        var info = document.getElementById("tnn");
+        info.innerText = "Thankyou for your Registration";
+    }
+
+</script>
+</head>
+<body>
+    <h4>DOM inner Text Property</h4>
+    <p id="para1">Javascript is developed by <b> Brenden Eich</b> in 1995.</p>
+    <form name="form1">
+    <br>
+    Name :
+    <input type="text" value=" ">
+    <br>
+    password
+    <input type="password" value="" name="pass" onkeyup="msg();">
+    Strength :
+    <span id="str">poor</span>
+    <br>
+    <input type="button" value="submit" onclick="show();">
+    </form>
+<p id="tnn"></p>
+
+<br>
+<br>
+<br>
+Javascript-DOM Property 
+
+    - innerText 
+
+        - Return normal text of the specific element without HTML interpretation 
+
+        - Used to create dynamic web content 
+
+        - Used to show validation message, password strength
+
+
+
+
+
+
+</body>
+</html>

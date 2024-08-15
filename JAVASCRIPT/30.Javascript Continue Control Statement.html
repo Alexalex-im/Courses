@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JS continue control statement</title>
+<script>
+
+    // var num;
+    //     document.write("Listing in reverse order <br>");
+    //     for(num=10;num>0;num--)
+    //     {
+    //         if(num==5)continue;
+    //         document.write(num + "<br>");
+    //     }
+
+    //     document.write("Listing done");
+
+    var i;
+    document.write("Entering the loop <br><br>");
+
+    outerloop: //label name
+     for(j=1;j<=3;j++)
+     {
+        document.write("Outer loop ----->" +j+ "<br>");
+        innerloop:
+        for(i=1;i<=5;i++)  //for(i=1;i<=3;i++)
+        {
+            //if(i==3)continue; //if(i==3) break innerloop both same result
+            if(j<2)continue outerloop;  // quite the outer loop
+            document.write("Inner loop " +i+ "<br>");
+        }
+
+     }
+
+
+</script>
+</head>
+<body>
+
+
+Continue 
+
+    - The continue statement "Jumps over" one iteration in the loop 
+
+    - Can used to skip one loop iteration 
+
+    - Used within the loop only 
+
+    - Syntax: 
+
+            continue;
+
+
+
+Label statement 
+
+    - Identifier used with break / continue.
+
+    - Break with label 
+
+    - Continue with label 
+
+    - Syntax labelname :
+
+
+</body>
+</html>

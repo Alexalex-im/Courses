@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-compatible" content="ie=edge">
+<title>JS numbers part-1</title>
+
+<script>
+
+    var num1=2, num2=2.34, value=10000000, nvalue=0.005;    // var num1=2, num2=2.34, value=1e7, nvalue=5e-3;
+    document.write("<br> Numbers :" ,num1+ "," +num2+ "," +value+ "," +nvalue);
+    var num_obj = new Number(456);
+    document.write("<br> Number using object :" ,num_obj);
+
+    //Properties
+    document.write("<br> Maximum value :" ,Number.MAX_VALUE);
+    document.write("<br> Minimum value :" ,Number.MIN_VALUE);
+    document.write("<br> +ve Infinity :" ,Number.POSITIVE_INFINITY);
+    document.write("<br> -ve Infinity :" ,Number.NEGATIVE_INFINITY);
+    document.write("<br> Not a Number :" ,Number.NaN);
+
+    var x = 100/0, y=-10/0, z="hello"/10;
+    document.write("<br> Value of 100/0 :" ,x);
+    document.write("<br> Value of -10/0 :" ,y);
+    document.write("<br> Value of 'hello'/10 :" ,z);
+    document.write("<br>");
+
+    // Methods
+    var x=10;
+    document.write("<br> <b>isFinite</b>");
+        document.write("<br>" ,Number.isFinite(x));
+        document.write("<br>" ,Number.isFinite(-Infinity));
+        document.write("<br>" ,Number.isFinite(NaN));
+        document.write("<br>");
+
+    document.write("<br> <b>isFinite</b>");
+        document.write("<br>" ,Number.isInteger(x));
+        document.write("<br>" ,Number.isInteger(-2));
+        document.write("<br>" ,Number.isInteger(-2.5)); 
+        document.write("<br>" ,Number.isInteger("2.5")); 
+        document.write("<br>" ,Number.isInteger(10/3)); 
+        document.write("<br>");
+       
+    var test=989721;
+    document.write("<br> <b> Exponential </b> ")
+    document.write("<br> Expo of 989721 :" +test.toExponential());
+    document.write("<br> Expo -2 :" + test.toExponential());
+    document.write("<br> Expo -4 :" + test.toExponential());
+    document.write("<br>");
+
+    var num = 10.143714;
+    document.write("<br> <b>Precision</b>");
+    document.write("<br> Pre of 10.143714 :" +num.toPrecision());
+    document.write("<br> Pre -2 :" +num.toPrecision(2));
+    document.write("<br> Pre -3 :" +num.toPrecision(3));
+    document.write("<br> Pre -10 :" +num.toPrecision(10));
+    document.write("<br>");
+
+
+    var x1 = 9.656;
+    document.write("<br> <b>Fixed</b>");
+    document.write("<br> Fixed 0 of 9.656 : " ,x1.toFixed(0));
+    document.write("<br> Fixed of 2 :" ,x1.toFixed(2));
+    document.write("<br> Fixed of 4 :" ,x1.toFixed(4));
+    document.write("<br> Find of 6 :" ,x1.toFixed(6));
+
+    
+
+
+
+</script>
+</head>
+<body>
+<br>
+<br>
+<br>
+Javascript-Numbers 
+
+    - Numbers are stored in 64-bit format 
+          ____________________________________________________
+          |      52(0 - 51)bits     |        Value           |
+          ----------------------------------------------------
+          |      11 bits(52 - 62)   |       Exponent         |
+          ----------------------------------------------------
+          |        1 bit (63)       |       Sign             |
+          ----------------------------------------------------
+
+            - Integers 15 digits     var x = 984567156111111
+
+            - Decimals 17 digits     var y = 0.1122334455667733
+    
+
+    - Numbers can be with or without decimals (Integer or Float)
+
+        - Max - 2 power 23
+
+        - Min - 2 power -23 
+
+
+Number Properties 
+            _____________________________
+            |     MIN_VALUE             |
+            -----------------------------
+            |     MAX_VALUE             |
+            ----------------------------- 
+            |     POSITIVE_INFINITY     |
+            ----------------------------- 
+            |     NEGATIVE_INFINITY     |
+            ----------------------------- 
+            |     NaN - Not a Number    |
+            -----------------------------
+
+
+Numbers Method 
+                 ________________________________________________________
+                 |  isfinite()      |  isInteger()       |  Valueof()   |
+                 -------------------------------------------------------- 
+                 |  toprecision()   |  toExponential()   |  toFixed()   |
+                 --------------------------------------------------------  
+                 |  parseInt()      |  parseFloat()      |  Number()    |
+                 --------------------------------------------------------
+                 |  tostring()      |  isNaN()           |              |
+                 --------------------------------------------------------
+
+
+
+
+
+
+
+
+
+</body>
+</html>

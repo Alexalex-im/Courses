@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JS Event Listener</title>
+<style>
+    body{
+        background-color:cyan;
+    }
+</style>
+<script>
+
+        function firstMsg(){
+            alert("1 welcome to learn about javascript event listener");
+        }
+
+        function secMsg(){
+            alert("2 it is easy to learn");
+        }
+
+        function hello(){
+            alert("hello");
+        }
+
+        var btn = document.getElementById("butn");
+        btn.addEventListener("click", firstMsg);
+        btn.addEventListener("click", secMsg);
+        btn.onclick=firstMsg;
+        btn.onclick=secMsg;
+        document.getElementById("p1").addEventListener("click",function()
+        {
+            alert("You clicked the paragraph element!");
+        },false);
+
+        var btn1 = document.getElementById("butn1");
+        btn1.addEventListener("click", msg);
+        btn1.addEventListener("mouseover",setClr);
+        btn1.addEventListener("mouseout",resetColr);
+
+        function msg(){
+            alert("Programming Line welcome you");
+        }
+
+        function setClr(){
+            btn1.style.background="yellow";
+        }
+
+        function resetColr(){
+            btn1.style.background="red";
+        }
+
+        function removal(){
+            document.getElementById("butn1").removeEventListener("click",msg);
+        }
+
+
+</script>
+</head>
+<body>
+<h1>Javascript - Event Listener</h1>
+
+<p>Click the button to see the effects of event Listener</p>
+
+<button id="butn" onclick="hello();">Click me</button>
+
+<h4>Event Capturing / Bubbling</h4>
+<div id="p1">
+    In bubbling ( default ) the inner most element's event is handled first and then the outer
+</div>
+
+<div>
+    In capturing the outer most element's event is handled first and then the inner.
+</div>
+
+<button id="butn1">Mouse events</button>
+
+<button id="butn2" onclick="removal();">Removal Listerner</button>
+
+
+
+
+<br>
+<br>
+<br>
+Javascript - EventListener 
+
+    - Event listener is a procedure that wait for an event to occur.
+
+    - Able to assign as many event listener to the same event for the same element 
+
+    - Events performed by user of the webpage, Event handler is performed by browser, Event 
+      Listener is like event handler able to assign multiple functions to same event.
+
+
+
+Event Listener - Syntax
+
+    - addEventListener(event,function,useCapture)
+
+        - Event - type of the event ( click, focus )
+
+        - Function - to call when the event occurs 
+
+        - useCapture - Boolean, optional default is false 
+
+            - Capturing - execute outer element event 
+
+            - Bubbling - execute inner element event 
+
+
+    - Remove Event Listener 
+
+        - removeEventListener( event, function )
+
+            - Removes event handlers that have been attached with the addEventListener method 
+
+</body>
+</html>

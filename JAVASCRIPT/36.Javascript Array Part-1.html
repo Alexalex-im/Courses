@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JS array part-1</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-compatible" content="ie=edge">
+<script>
+
+    //By Literal
+    var students=["Linkesh", "Rakesh", "Harshita", "Sandosh", "Monica"];
+    document.write("Student List :" ,students);
+
+    var colors=[]
+    colors[0]="white";
+    colors[1]="Gray";
+    document.write("<br> color List :" ,colors);
+
+
+    var marks=[5];
+    marks[0]=78;
+    marks[1]=89;
+    marks[2]=91;
+    marks[3]=93;
+    marks[4]=77;
+    document.write("<br> List of Marks :" ,marks);
+
+
+    //Constructors 
+    var topic = new Array();
+    topic[0]="Javascript";
+    topic[1]="Html";
+    topic[2]="Java";
+    topic[3]="Css";
+    //insertion
+    topic[4]="C";
+    // topic[5]="data structure";
+    topic[100]="data structure";
+
+
+    // topic.length=2;
+    // topic[2]="python";
+
+    document.write("<br> List of topics :" ,topic);
+    
+    var info = new Array("Rakesh", 28,"Programming Line", 35000, 2.5);
+    document.write("<br> Information :" , info);
+
+    document.write("<br>");
+    
+
+    
+    //Access using loop
+    
+    var key;
+
+    for(key=0;key<topic.length;key++)
+    {
+        document.write("<br>",topic[key]);
+    }
+
+    var j;
+
+    for(j of topic)
+    {
+        alert(j);
+    }
+
+    var i=0;
+
+    for(i in topic)
+    {
+        document.write("<br>", topic[i]);
+    }
+
+    //
+    var name="Rakesh"
+
+    for (var i=0;i<name.length;i++)
+    {
+        document.write("<br>",name[i]);
+    }
+
+    //
+    var i, sum=0;
+    for(i=0;i<marks.length;i++)
+    {
+        sum += marks[i];
+        document.write("<br>", marks[i]);
+    }
+    document.write("<br> Total Marks :" ,sum);
+
+
+    //
+    var list=[12, 3, 4, 5, 455, 45, 45, 2, 5];
+    var key1, count=0;
+    for(key1=0;key1<list.length;key1++)
+    {
+        if(list[key1]<=10)
+        {
+            count++;
+        }
+    }
+    alert("Numbers less than 10 in the list :" +count);
+
+</script>
+</head>
+<body>
+
+<br><br><br>
+
+Javascript-Array 
+
+Introduction
+
+    - Used to store multiple values in a single variable.
+
+    - Access the values by referring to an index number. 
+
+             __________________________________________________
+      Values |  JS   |  1995  |   Front End    |    Script    |
+             --------------------------------------------------
+       Index |  0    |    1   |      2         |      3       |
+             --------------------------------------------------
+
+
+Array Creation
+
+    - By array literal
+
+        - var arr = []
+
+    - By using an array constructor (new keyboard)
+
+        - var arr = new Array()
+
+
+
+Array Manipulation 
+
+    - loop 
+
+        - For loop
+
+        - For...of 
+
+        - For...in 
+
+    - Insertion 
+
+    - Replace
+
+</body>
+</html>

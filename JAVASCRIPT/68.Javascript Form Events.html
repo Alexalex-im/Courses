@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JS Form Events</title>
+<script>
+
+        function displayInfo(){
+            var fname = document.forms[0].name.value;
+            var fage = document.forms[0].no.value;
+            var fgender = document.forms[0].gender.value;
+            alert("Detailed are name :" +fname+ "Age :" +fage+ "Gender :" +fgender);
+
+        }
+
+
+</script>
+</head>
+<body>
+
+<form onsubmit="displayInfo();" action="output.html">
+<table>
+<h2>Form Registration</h2>
+<tr>
+    <td>Enter your name</td>
+    <td><input type="text" id="name" onfocus="this.style.background='yellow'" onblur="alert('namefield lost focus');"></td>
+</tr>
+
+<tr>
+    <td>Enter your age</td>
+    <td><input id="no" type="number"></td>
+</tr>
+
+<tr>
+    <td>Select gender</td>
+    <td>
+        <select id="gender" onchange="alert('gender changed');">
+            <option>Select</option>
+            <option>Male</option>
+            <option>Female</option>
+        </select>
+    </td>
+</tr>
+
+<tr><td></td><td><button>Submit</button></td></tr>
+
+</table>
+</form>
+
+<br>
+<br>
+<br>
+Form Events 
+
+    - Focus 
+
+    - Blur
+
+    - Change 
+
+    - Submit
+
+</body>
+</html>

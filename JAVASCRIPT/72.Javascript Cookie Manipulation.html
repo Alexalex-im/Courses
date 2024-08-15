@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+<title>JS - cookie Manipulation</title>
+
+<style>
+    body{
+        background-color:cyan;
+    }
+</style>
+<script>
+
+        // function setCookie(){
+
+        //     if( document.form1.user1.value == " ")
+        //     {
+        //         alert("Enter the username");
+        //         return;
+        //     }else{
+        //         value = document.form1.user1.value;
+        //         document.cookie = "name = " + encodeURIComponent(value);
+        //         document.write("Setting cookie :" +"name = " +value);
+        //     }
+        // }
+
+
+        function setCookie( name, value, nodays )
+        {
+            var cookieValue = name +"="+encodeURIComponent(value);
+            if( nodays === "number")
+            {
+                cookieValue += ", max-age=" + (nodays*24*60*60);
+                document.cookie = cookieValue;
+            }
+            console.log( cookieValue );
+            console.log( document.cookie );
+        }
+
+        function getCookie( name ){
+            var arr = document.cookie.split(";");
+            for( var i=0; i<arr.length; i++ )
+            {
+                var arr1 = arr[i].split("=");
+
+                if(name == arr1[0].trim())
+                {
+                    return decodeURIComponent(arr1[1]);
+                }
+            }
+            return null;
+        }
+
+        function checkCookie(){
+            var user = getCookie("username");
+            if( user != null )
+            {
+                alert("welcome again" + user);
+            }else{
+                user = prompt("please enter your name :"," ");
+
+                if( user != user != null )
+                {
+                    setCookie( "username ",user, 1);
+                }
+            }
+        }
+
+        window.onload=checkCookie();
+        setCookie("username", "", 0);
+
+
+
+</script>
+</head>
+<body bgcolor="burlywood">
+
+<h3>Cookie</h3>
+
+<h3>Set and Get cookies</h3>
+
+<form name="form1">
+Enter the username 
+<input type="text" name="user1">
+<button name="setcookie" onclick="setCookie();">Set cookie</button>
+</form>
+
+<br>
+<br>
+
+<h3>Cookie</h3>
+<p>Here setting cookie and displayed cookie are explained</p>
+
+
+
+
+
+
+
+<br>
+<br>
+<br>
+Javascript - Cookie Manipulation
+
+    - Set cookie( Write )
+
+    - Get cookie( Read )
+
+    - Update cookie( modify )
+
+    - Delete cookies( remove )
+
+
+    - document.cookie - used to store cookies 
+      document.cookie = "key1 = value1 ;key2 = value2 ;
+      expires = date";
+
+      document.cookie = "username=Rakesh; expires=Thu, 18 Dec 2020 12:00:00 
+      UTC; path = /; domain = example.com; secure";
+
+    - encodeURIComponent - used to encode special characters 
+
+    - decodeURIComponent - used to decode special characters
+
+</body>
+</html>

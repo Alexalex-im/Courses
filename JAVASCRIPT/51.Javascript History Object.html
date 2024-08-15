@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JS History Object</title>
+<style>
+    .button{
+        color:white;
+        background-color:blue;
+        text-align:center;
+        border-radius:5px;
+        border:none;
+    }
+
+</style>
+<script>
+        // History property 
+
+        function hlength(){
+            document.write("<br> Number of pages visited : ", history.length);
+        }
+        hlength();
+
+
+        // History method
+        function hback(){
+            window.history.back();
+        }
+
+        function hForward(){
+            window.history.forward();
+        }
+
+        function hGo(page){
+            window.history.go(page);
+        }
+
+
+
+
+        // Screen Property
+        document.write("<br> screen width :" +screen.width);
+        document.write("<br> screen height :" +screen.height);
+        document.write("<br> screen avail width :" +screen.availWidth);
+        document.write("<br> screen avail Height :" +screen.availHeight);
+        document.write("<br> screen color depth :" +screen.colorDepth);
+        document.write("<br> screen pixel Depth :" +screen.pixelDepth);
+
+        // Screen method
+
+</script>
+
+<br>
+<input type="button" class="button" value="back" onclick="hback();">
+<br>
+<input type="button" class="button" value="Next" onclick="hForward();">
+<br>
+<input type="button" class="button" value="Next 2" onclick="hGo(2);">
+<br>
+<input type="button" class="button" value="Back 2" onclick="hGo(-2);">
+<br>
+<input type="button" class="button" value="Reload" onclick="hGo(0);">
+
+</head>
+<body>
+<br>
+<br>
+<br>
+
+Javascript-History object 
+
+    - Contains browser history 
+
+    - Represent an array of URL's visited by the user 
+    
+    - Property - length 
+
+    - Method - forward()
+               back()
+               go()
+
+
+Screen object
+
+    - contains information about the users screen 
+
+    - Resolution ( Width, Height ) 
+
+    - Color depth, pixel depth ..... 
+
+    - Property
+
+        - width 
+
+        - height 
+
+        - availWidth 
+
+        - availHeight 
+
+        - colorDepth 
+
+        - pixelDepth
+
+
+</body>
+</html>

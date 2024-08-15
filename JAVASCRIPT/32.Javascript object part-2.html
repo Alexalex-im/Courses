@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JS Object part-2</title>
+<script>
+
+
+    // literals
+
+    var student={};
+    student.name="Harish";
+    student.id=45;
+    student.dept="IT";
+    student.year="1st year";
+    student.result=function()
+    {
+        console.log("A+");
+    };
+
+    student.result();
+
+    // student.year="2nd year";
+    // student.grade="A";
+    // console.log(student);
+    // delete student.grade;
+    // console.log(student);
+
+
+    console.log("Literal1 example---> student Name:" +student.name);
+
+    console.log(student);   
+    console.log(student.name);
+    console.log(student.year);
+    
+
+   
+
+    var student1={
+        "first name":"ragasri",
+        id:26,
+        dept:"cse",
+        year:"2nd year",
+        result:function()
+        {
+            console.log("B");
+        }
+    };
+    student1.result();
+
+    student1.grade="A+";
+    console.log("Literal1 example---> student Name :" +student1.grade);
+
+
+    // Instance of object
+
+    // var lecturer = new Object();
+    // lecturer.name="Uday";
+    // lecturer.dept="EEE";
+    // lecturer.id=56;
+    // lecturer.salary=40000;
+    // lecturer.rating="good";
+
+    // console.log("Instance example------> Lecturer Rating :"+lecturer.rating);
+
+
+    // Constractor
+
+    function lect(name, dept, sal)
+    {
+        this.name=name;
+        this.dept=dept;
+        this.sal=sal;
+    }
+
+    var l1=new lect("Raja", "Cse", 45000);
+    var l2=new lect("Uday", "Civil", 30000);
+
+    // lect.rating="A+";           // object undefined
+
+    console.log(l1.name);
+    console.log("Constructor example----> Lecturer 2 dept :"+l2.dept);        //console.log (l2["dept"])
+
+    // console.log("Constructor example----> Lecturer 2 dept :"+l2.rating); 
+
+    console.log("Displaying all object properties");
+    var key;
+    for(key in student1)
+    {
+        console.log(student1[key]);
+    }
+
+
+</script>
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+Javascript-object 2
+
+    - Adding object properties 
+
+    - Deleting object properties 
+
+    - Including methods in objects.
+
+    - For in loop - To display all the properties of the object 
+
+
+</body>
+</html>

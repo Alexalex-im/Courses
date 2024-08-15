@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JS Function Parameters</title>
+<script>
+
+    // Function parameters 
+    function checkAge(age){
+      if (age>=18)
+      {
+        document.write("Allowed to vote" ,age);
+      }else{
+        document.write("Not allowed to vote " ,age);
+      }
+    }
+    checkAge(18);  // checkAge(18.5,45); - take first value     checkAge();
+
+
+    // Arguments 
+    var result = fmax(23, 45, 1, 56, 90, 200, 2, 600);
+
+    function fmax(){
+      var max = arguments[0];
+
+      for(var i=0;i<arguments.length;i++)
+      {
+        if(arguments[i]>max)
+        {
+          max = arguments[i];
+        }
+      }
+      return max;
+    }
+    document.write("<br> Maximum Number :" ,result);
+
+
+    // Pass by Value 
+    var num1=100, num2=50;
+    function min(num1, num2){
+      num1=200;
+      num2=300;
+      document.write("<br> Value inside function :" ,num1," ", num2);
+      if(num1>num2)
+      {
+        document.write("<br> Minimum :" ,num2);
+      }else{
+        document.write("<br> Minimum :" ,num1);
+      }
+    }
+    min(num1, num2);
+    document.write("<br> Value outside function :" ,num1, num2);
+
+    // Pass by References 
+    var tutorial = {
+      name:"Programming Line",
+      author:"Rakesh",
+      course:"Computer science",
+      topic:"Html"
+    };
+    display(tutorial);
+
+    function display(tut){
+          // tut.topic = "Javascript";
+          tut.course = "Programming Languages";
+          document.write("<br> Inside function object values :",tutorial.name,"<br>",
+        tutorial.author,"<br>",tutorial.course,"<br>",tutorial.topic);
+    }
+    document.write("<br> Outside function object values :",tutorial.name,"<br>",
+        tutorial.author,"<br>",tutorial.course,"<br>",tutorial.topic);
+    
+
+    
+</script>
+</head>
+<body>
+
+<br>
+<br>
+<br>
+Javascript-Function Parameters 
+
+    - Names listed in function definition 
+      function funcName(parameters1 ,parameters2)
+      { code }
+
+    - Function definitions do not specify datatypes for parameters 
+
+    - Function do not perform type checking 
+
+    - Functions do not check the no.of arguments received
+
+
+
+Function-Arguments 
+
+    - Real values passed to (received by ) function 
+    
+    - Argument object contains an array of arguments when the function called 
+
+    - Arguments length is used to find the number of arguments passed in the function 
+
+    - Arguments are passed by value 
+
+      -If a function changes an argument value, it deos not change the parameters original value 
+
+    - Objects are passed by References 
+
+      - If a function changes a object property, it changes the original value ( Reflected )
+
+</body>
+</html>

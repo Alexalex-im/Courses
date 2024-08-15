@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Javascript-Object Advanced conceptpar -3</title>
+<script>
+
+
+    var lecturer = new Object();
+    lecturer.name="uday";
+    lecturer.dept="EEE";
+    lecturer.id=56;
+    lecturer.salary=40000;
+    lecturer.Performance=function PassPercentage()
+    {
+        console.log("75%");
+    };
+
+    // lecturer.salary=50000;
+    // console.log(lecturer.salary);
+
+    // console.log(lecturer.hasOwnProperty("name"));
+    // console.log(lecturer.hasOwnProperty("Designation"));
+    // console.log(lecturer.hasOwnProperty("dept")); 
+    // console.log(lecturer.hasOwnProperty("id"));
+    // console.log(lecturer.hasOwnProperty("salary"));
+
+
+    // Object.defineProperty(lecturer, "salary", {
+    //     configurable:true,
+    //     writable:false,
+    //     enumerable:false,
+    //     value:40000
+    // });
+
+
+    // var key;
+    // for(key in lecturer)
+    // {
+    //     console.log(lecturer[key]);
+    // }
+
+    // lecturer.salary=45000;
+    // console.log(lecturer.salary);
+
+        Object.defineProperty(lecturer, "salary", {
+
+            configurable: false
+        }
+        );
+
+        // var lecturer1={
+        //     name:"Darmesh",
+        //     joinyear:2019,
+        //     salary:25000,
+        //     bonus:0
+        // };
+        // lecturer1.bonus=10;
+        // console.log(lecturer1);
+
+        var lecturer2={
+            name:"Reshmi",
+            _bonus:0,
+            joinyear:2015   // 2019
+        }
+
+        // Object.defineProperty(lecturer2, "bonus", {
+        //     get:function(){
+        //         return this._bonus;
+        //     },
+        //     set: function(newBonus){
+        //         if (this.joinyear < 2017 ){
+        //             this._bonus = newBonus;
+        //         }
+        //     }
+        // });
+        // lecturer2.bonus=10;
+        // console.log(lecturer2);
+
+
+        Object.defineProperties(lecturer2, {
+            name:{
+                value:"Reshmi"
+            },
+            joinyear:{
+                value:2000,
+                writable:true 
+            },
+            bonus:{
+                get:function(){
+                    return this._bonus;
+                },
+                set:function(newBonus){
+                    if (this.joinyear < 2017 ){
+
+                        this._bonus = newBonus;
+                    }
+                }
+            }
+        });
+
+        lecturer2.bonus=3;
+        console.log(lecturer2);
+
+
+        // Constractor
+
+    function lect(name, dept, sal)
+    {
+        this.name=name;
+        this.dept=dept;
+        this.sal=sal;
+    }
+
+    var l1=new lect("Raja", "Cse", 45000);
+    var l2=new lect("Uday", "Civil", 30000);
+    lect.prototype.rate="A+";
+    lect.prototype.display=function()
+    {
+        return this.name+ "" +this.dept;
+    }
+    console.log(l1.rate);
+    console.log(l1.display());
+
+    // lect.rating="A+";           // object undefined
+
+    // console.log(l1.name);
+    // console.log("Constructor example----> Lecturer 2 dept :"+l2.dept);        //console.log (l2["dept"])
+
+    // console.log("Constructor example----> Lecturer 2 dept :"+l2.rating); 
+
+    // console.log("Displaying all object properties");
+    // var key;
+    // for(key in student1)
+    // {
+    //     console.log(student1[key]);
+    // }
+
+
+
+
+</script>
+</head>
+<body>
+
+
+
+Advanced concepts
+
+    - HasOwnProperty
+
+    - DefineProperty
+
+    - DataPropertyAttributes
+
+        - [[configurable]]
+
+        - [[enumerable]]
+
+        - [[writeable]] 
+
+        - [[value]]
+
+    - Accessor Property ( Getters / Setters)
+
+
+
+Prototype property 
+
+All javascript object inherit properties and methods from a prototype.
+
+    - To add new property to constructor
+            - Object.prototype.property=value;
+    
+    - To add new method to constructor 
+            - Object.prototype.property=function;
+
+
+
+</body>
+</html>

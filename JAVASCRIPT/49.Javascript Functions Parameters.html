@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> JS functions parameters </title>
+<script>
+
+        //Bind
+        var rectangle1 ={
+            length:200,
+            breadth:50
+        };
+
+        var rectangle2 ={
+            length:45,
+            breadth:25
+        };
+
+        function area(){
+            // document.write("<br> Length " ,this.length, " Breadth ", this.breadth);
+            // var area = this.length * this.breadth;
+            // document.write("<br> Area :", area);
+            document.write(this);
+        }
+        window.length = 10;
+        window.breadth = 20;
+        // var r1_area = area.bind(rectangle1);
+        // var r2_area = area.bind(rectangle2);
+        // r1_area();
+        // r2_area();
+        area();
+
+
+
+        // call
+        var obj1={
+            name:"Rakesh",
+            course:"Computer science",
+            show:function(msg){
+                document.write("<br>" +msg+ "Welcome to learn" ,this.course);
+            }
+        };
+
+        var obj2={
+            name:"Uday",
+            course:"Civil Courses"
+        };
+
+        function tutorial(lang1, lang2, lang3){
+            document.write("<br>" +this.name+ ":" +this.course+ ":" +lang1,"," ,lang2, ",",lang3);
+        }
+        tutorial.call(obj1, "Javascript" ,"Html", "c");
+        tutorial.apply(obj2,["Hydraulics" ,"Structural design", "Estimation"]);
+        document.write("<br>");
+        obj1.show.call(obj1, "hello");
+        obj1.show.apply(obj2,["hi"]);
+
+
+</script>
+</head>
+<body>
+
+<br>
+<br>
+<br>
+Javascript Function - bind(), call(), apply()
+
+    - bind()
+
+        - Binds / attach an object to a function 
+
+        - Reference it using "this"
+
+        - To execute function, need to call the function 
+
+    - apply()
+
+        - Allows to call a function by passing the arguments in a single array 
+
+    - call()
+
+        - Allow to call a function by passing arguments list
+
+
+Syntax 
+
+    - call( this, arg1, arg2, ...)
+
+    - apply( this, [args Array])
+
+    - bind ( this, arg1, arg2 ...)
+
+
+Difference
+
+    - bind()
+
+        - Use to call function later 
+
+        - Useful in events, callback functions 
+
+        - return a function 
+
+    - Call()
+
+        - Execute function immediately 
+
+        - arguments list
+
+    - Apply 
+
+        - Execute function immediately 
+
+        - arguments array 
+
+</body>
+</html>

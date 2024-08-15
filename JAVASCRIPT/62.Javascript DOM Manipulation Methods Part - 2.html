@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JS DOM Manipulation Methods Part - 2</title>
+<script>
+
+        function chldCount(){
+            var cnt1 = document.getElementById(" uses ").childElementCount;
+            alert("No of child element inside UL :" +cnt1);
+        }
+
+        
+        function removeChld(){
+            var parent1 = document.getElementById("first");
+            var chld1 = document.getElementById("author");
+            // parent1.removeChild(chld1);
+            chld1.parentNode.removeChild(chld1);
+            
+        }
+
+        function replaceChld(){
+            var parent = document.getElementById("first");
+            var chld2 = document.getElementById("content");
+
+            var elem = document.createElement("p");
+            var txt = document.createTextNode("Subscribe to get more videos");
+            elem.appendChild(txt);
+
+            parent.replaceChild(elem, chld2);
+        }
+
+        function RemoveList(){
+
+            var element = document.querySelector("ul");
+            var chld = element.firstElementChild;
+            while(chld){
+                element.removeChild(chld);
+                chld = element.firstElementChild;
+
+            }
+
+            
+        }
+
+
+
+
+
+</script>
+</head>
+<body>
+
+<h3>Replace child, remove child, Child Element count </h3>
+<div id="first">
+    <h5 id="title">Programming Line</h5>
+    <p id="author">Owned by Rakesh</p>
+    <p id="content">Computer programming languages are explained here</p>
+</div>
+
+<h4>To Do with Javascript</h4>
+<div id="points">
+    <p>There are lot more things we can do with Javascript.</p>
+    <ul>
+        <li>We can modify the content of a web page by adding or removing elements.</li>
+        <li>we can change the style and position of the element on a web page.</li>
+        <li>We can monitor events like mouse click, hover, etc. and react to it.</li>
+        <li>We can perform and control transitions and animations.</li>
+        <li>we can create alert pop-ups to display info or warning message to the user.</li>
+        <li>We can perform operations based on user inputs and display the result.</li>
+        <li>We can validate user inputs before submitting it to the server.</li>
+    </ul>
+    <p>There are many other interesting things that 
+        you can do with Javascript. You will learn about all of them in detail 
+        in upcoming chapter.
+    </p>
+</div>
+
+<input type="button" onclick="chldCount();" value="count">
+
+<input type="button" onclick="removeChld();" value="Delete">
+
+<input type="button" onclick="replaceChld();" value="Replace">
+
+<input type="button" onclick="RemoveList();" value="RemoveList">
+<br>
+<br>
+<br>
+JS - DOM Manipulation 
+
+    - removeElement()
+
+        - Used to remove an element from an HTML document 
+        - It return the removed child 
+
+    - replaceChild 
+
+        - Used to replace an element with new one 
+
+    - childElementCount 
+
+        - Used to give the child count of an element 
+
+
+
+</body>
+</html>

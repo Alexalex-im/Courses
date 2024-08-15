@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JS Email Validation</title>
+
+<style>
+
+
+
+
+
+</style>
+<script>
+
+        function validate(){
+            var mail = document.getElementById("email").value;
+            var atpos = mail.indexOf("@");
+            var dotpos = mail.lastIndexOf(".");
+
+            if ( mail==" "){
+                alert("Enter your mail ID");
+                document.myform.email.focus();
+                return false;
+            }
+
+            if( atpos<1 || dotpos+2 < atpos || dotpos+2 < mail.length)
+            {
+                alert("Enter the valid email Id\n atposition :" +atpos+ "\n dotposition :"+dotpos);
+                document.myform.email.focus();
+                document.myform.email.value=" ";
+                return false;
+            }
+
+            var firstpass = document.getElementById("pass").value;
+            var secondpass = document.getElementById("repass").value;
+            if( firstpass=="" || secondpass==""){
+                alert( "Enter the password");
+                document.myform.pass.focus();
+
+                return false;
+            }
+
+            if( firstpass != secondpass){
+                alert( "Password must be same");
+                document.myform.repass.value=" ";
+                document.myform.repass.focus();
+                return false;
+            }
+            return true;
+        }
+
+</script>
+</head>
+<body bgcolor="green">
+<h2 align="center" style="color:yellow;">Email Validation</h2>
+<h3 style="color:yellow;" align="center">Signup form</h3>
+
+<div class="container">
+Fill in the form to create account
+<br>
+<form name="myform" action="formoutput.html" onsubmit="return (validate());" method="post">
+
+<label>Email ID</label>
+<input type="text" id="email" name="email">
+<br>
+<br>
+<label>Password</label>
+<input type="password" id="pass" name="pass" size="53">
+<br>
+<br>
+<label>Retype the password</label>
+<input type="password" id="repass" name="repass" size="53">
+<br>
+<br>
+<input type="submit" value="signup">
+<input type="reset" value="cancel">
+
+</form>
+</div>
+
+
+
+
+
+<br>
+<br>
+<br>
+Javascript - Email Validation 
+
+    - Email validation
+
+        - Javascript ( web browser ) validate the form data on the client to authendicate the user 
+
+            - email id must contain the @ and . character 
+
+            - there must be at least one character before and after the @
+
+            - There must be at least two characters after .(dot).
+
+
+</body>
+</html>

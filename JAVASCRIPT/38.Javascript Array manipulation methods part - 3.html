@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JS Array manipulation methods part - 3</title>
+<script>
+
+
+        var result1;
+        var value1=[10, 10, 5, 10, 12, 8];
+        var sum=0;
+        //For each
+        // document.write("<br> Array elements :" ,value1);
+        // value1.forEach(function(item){
+        //     sum = sum + item;
+        //     document.write("<br>" ,sum);
+        // });
+
+        // function(sum,item)
+        // {
+        //     return sum + item;
+        // }
+        result1=value1.reduce((sum, item)=>sum + item, 0);
+          document.write("<br> Reducing the array :" ,result1);
+
+        // var status; 
+        // status = Array.isArray(value1);
+        // document.write("<br> Array ? :" ,status);
+
+        //Map
+        var day=["Monday" ,"Tuesday", "Wednesday" ,'Thursday'];
+        // var lengths = day.map(item => item.length);
+        // document.write("<br> Array Element :" ,day);
+        // document.write("<br> Length of the element :" ,lengths);
+
+        // result1=value1.map(x=>x*2);
+        // document.write("<br> Array Elements * 2 :" ,result1);
+        
+        //copywithin 
+        // document.write("<br> Array Element :" ,day);
+        // result=day.copyWithin(0, 2, 3);     //result=day.copyWithin(0, 1, 3);
+        // document.write("<br> copywithin :" ,result);
+
+        var marks=[35, 15, 56, 70, 56];
+        function check(value)
+        {
+            return value>35;
+        }
+        document.write("<br> Array Elements :" ,marks);
+        document.writeln("<br> To check every Marks > 35 :" ,marks.every(check));
+        document.writeln("<br> To check some Marks > 35 :" ,marks.some(check));
+        document.writeln("<br> To list all Marks > 35 :" ,marks.filter(check));
+
+        var result2=day.includes("Thursday");
+        document.write("<br> Includes :" ,result2);
+
+        //Sorting
+        var result=day.sort();
+        document.write("<br> Sorting array :" ,result);
+
+        result=marks.sort();
+        document.write("<br> Sorting Numbers :" ,result);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</head>
+<body>
+<br><br>
+<br>
+
+Array methods
+
+    - forEach() - To run a function for every element 
+    - reduce() - Used to calculate single value based on array.
+    - isArray() - checks for being an array 
+    - map() - It calls the specified function for every element into new array 
+    - copywithin() - Copies the part of the given array to new one 
+    - some() - Check atleast one element in the array satisfying the condition (Boolean)
+    - every() - To check all the element in an array satisfying the condition (Boolean)
+    - filter() - Return an array of all matching elements 
+    - includes() - It checks whether an array contains the specified element 
+    - sort() - It return the element in the array in a sorted order.
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JS array manipulation method part-2</title>
+<script>
+
+
+    var days=["Tuesday", "Thursday", "Friday"];
+    document.write("Array :" ,days);
+    document.write("<br>");
+    days.push("saturday");
+
+    document.write("<br> After Pushing :" ,days);
+    document.write("<br> Poped element :" ,days.pop());
+    document.write("<br> After popping :" ,days);
+    document.write("<br>");
+
+    days.unshift("Monday");
+    document.write("<br> After unshifting :" ,days);
+    document.write("<br> Shifting element :" ,days.shift());
+    document.write("<br> After shifting :" ,days);
+    document.write("<br>");
+    days.unshift("Monday");
+    document.write("<br>");
+
+    document.write("Array :" ,days);
+    var weakends=["saturday", "sunday"];
+    var misseddays=["Monday", "Wednesday"];
+    var result;
+    // result=days.concat(weakends,misseddays);    //result=days.concat(weakends,misseddays);
+    result=days.concat("Monday");
+    document.write("<br> After concatenating :" ,result);
+
+    var separator=result.slice(3);   //var separator=result.slice(1,4 -1,-3)
+    document.write("<br> After slicing :", separator);
+
+    var result1=days.splice(2,0, "Wednesday");
+    document.write("<br> Removed element :" ,result1);
+    document.write("<br> After splicing :" ,days);
+
+    var rev=days.reverse();
+    document.write("<br> After Reversing :" ,result1);
+    document.write("<br> After splicing :" ,days);
+
+    var rev=days.reverse();
+    document.write("<br> After Reverse :",rev);
+    days.reverse();
+
+    document.write("<br>");
+    days[4]="Thusday";
+    document.write("<br> Array :", days);
+    document.write("<br> Index of the thursday :" ,days.indexOf("thursday"));
+    document.write("<br> LastIndex of Thursday :" ,days.lastIndexOf("Thursday"));
+
+    var sep=days.join("--");
+    document.write("<br> After joining :" ,sep);
+
+    var fill1=days.fill("weekday" ,1,3);    // var fill1=days.fill("weekday");
+    document.write("<br> After filling :" ,days);
+    document.write("<br>");
+
+    var value=[10,5,8,21,11,2];
+    var tofind=value.find(x=>x>10);
+    document.write("<br> After value>10 :" ,tofind);
+    var tofindIn=value.findIndex(x=>x>10);
+    document.write("<br> After finding value>10 :" ,tofindIn);
+
+
+</script>
+</head>
+<body>
+<br>
+<br>
+<br>
+Array Manipulation Methods 
+                        _____________________________________________________________________________________________
+                        |   push()            |   pop()           |   shift()               |   unshift()           |
+                        ---------------------------------------------------------------------------------------------
+                        |   concat()          |   find()          |   every()               |   fill()              |
+                        ---------------------------------------------------------------------------------------------
+                        |   filter()          |   indexof()       |   findIndex()           |   forEach()           |
+                        ---------------------------------------------------------------------------------------------
+                        |   includes()        |   reduce()        |   join()                |   LastIndexOf()       |
+                        ---------------------------------------------------------------------------------------------
+                        |   map()             |   splice()        |   reverse()             |   slice()             |
+                        ---------------------------------------------------------------------------------------------
+                        |   sort()            |   isArray()       |   copywithin()          |   some()              |
+                        ---------------------------------------------------------------------------------------------
+
+Array methods 
+
+    - push() - Adds a new element to an array at the end 
+    - pop() - Removes last element from an array
+    - shift() - Removes the first element from an array 
+    - unshift() - Adds new element at the front of an array 
+    - cancat() - Merging two or more arrays & from new array 
+    - slice() - slice out a piece of an array into new one 
+    - splice() - Add / remove elements from the existing array 
+    - reverse() - Reverse the element of given array 
+    - indexOf() - Returns the index of the first match in array 
+    - lastIndexof() - Returns the index of the last array match.
+    - Fill() - Fills element into an array with static values 
+    - Join() - It joins the array elements using a separator 
+    - find() - It returns the value of the first element in an array that satisfies the condition.
+    - findindex() - It returns the index value of the first element in an array that satisfies the condition. 
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JS Document Object Model Part - 3</title>
+<script>
+
+
+    function changetags(){
+
+        var tags = document.getElementsByTagName('p');      //var tags = document.getElementsByTagName('*');  
+        // document.write(tags);
+        // console.log(tags);
+
+        tags[0].style.backgroundColor="green";
+        tags[1].style.fontStyle="italic";
+        tags[2].style.color="red";
+        tags[3].style.textIndent="40px";
+
+        var len = tags.length;
+        for (var i=0; i<length; i++)
+        {
+            tags[i].style.fontFamily="sans-serif";
+        }
+    }
+
+
+
+
+</script>
+</head>
+<body>
+
+<div id="div1">
+
+    <p id="intro">Programming Line by Rakesh</p>
+    <p id="PL">Programming Line is a youtube channel.Here computerProgramming languages such as C, HTML, Javascript, Data Structures
+        DBMS are clearly explained by well experienced professionals.
+    </p>
+</div>
+<p>Subscribe Programming Line to get latest videos </p>
+<p>Thank you for your support. For any queries you can enquire in the comment section</p>
+
+<input type="button" value="change" onclick="changetags();">
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+Javascript-DOM Methods 
+
+    - getElementByID()
+
+    - getElementByName()
+
+    - getElementByTagName()
+
+    - getElementByClassName()
+
+
+getElementByTagName()
+
+    - Used to find and retrieve collection of elements using the specific tag 
+
+    - Array index is used to access the elements with the specific tag - HTML collection is an array of objects
+
+    - Length property is used to find the number of elements 
+    
+    - Loop is used to modify all the elements 
+
+
+
+</body>
+</html>

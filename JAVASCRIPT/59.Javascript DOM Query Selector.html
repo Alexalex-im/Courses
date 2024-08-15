@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JS DOM Query selector</title>
+<style>
+    a[target] {
+        background-color:yellow;
+    }
+</style>
+<script>
+
+    function changeClr(){
+        var para = document.querySelector("p");
+        para.style.color = "red";
+    }
+
+    function clss(){
+        var para = document.querySelector("p.comp");
+        para.style.background = "lightblue";
+    }
+
+    function func(){
+        var para = document.querySelector("#intro");
+        para.innerHTML = "Javascript by Rakesh";
+    }
+
+    function divFunction(){
+        var para = document.querySelector("div > p");
+        para.style.background = "lightgreen";
+    }
+
+    function headFunc(){
+        var para = document.querySelector("h5, h4");
+        para.style.background = " yellow ";
+    }
+
+    function linkFunc(){
+        var para = document.querySelector("a[target]").style.border = "10px solid blue";
+        para.style.background = " yellow ";
+    }
+
+    function listFunc(){
+        var para = document.querySelector("li.main").innerHTML="Advanced javascript ";
+        para.style.background = " yellow ";
+    }
+
+
+</script>
+</head>
+<body>
+
+<h4>DOM Method</h4>
+<h5>Query selector()</h5>
+
+<div>
+<p id="intro">
+Programming Line by Rakesh.
+Many Computer programming languages are available in this channel.</p>
+<p class="comp">Language are explained by well experienced lecturers</p>
+<p class="comp">There are many levels - Beginning, Intermediate, Advanced lecturer</p>
+</div>
+
+<ul id="PL">
+    <li>C</li>
+    <li class="main">C++</li>
+    <li>Java</li>
+    <li>Javascript</li>
+    <li>HTML</li>
+</ul>
+
+<a href="https://www.youtube.com/results?search_query=programming+Line" target="_blank" >Subscribe</a>
+<input type="button" value="change" onclick="changeClr();">
+<button onclick="clss();">Click</button>
+<button onclick="func();">Text Change</button>
+<button onclick="linkFunc();">LinkChange</button>
+<button onclick="divFunction();">div change</button>
+<button onclick="headFunc();">Header Change</button>
+<button onclick="listFunc();">List Change</button>
+
+<br>
+<br>
+<br>
+JS - DOM Query Selector 
+
+    - querySelector() Method
+
+     - Return first element that matches a specified CSS selector 
+
+     - Used to select HTML elements based on ID, classes, values of attributes, types, attributes
+
+     - .-To specify the class, #-To specify ID, >-to specify the inner element, a[target] - to specify
+       anchor target.
+
+
+</body>
+</html>

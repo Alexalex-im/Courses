@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-compatible" content="ie=edge">
+
+<title>JS Document Object Model </title>
+<script>
+
+        function changeColor(){
+            var divcolor = document.getElementById("div1");
+            divcolor.style.backgroundColor = "lightgreen";
+        }
+</script>
+
+</head>
+
+<body>
+<h2>Programming Line</h2>
+<div id="div1" style="background-color:lightblue;">
+<h3>Welcome to programming line by Rakesh B.E (cse) </h3>
+<p id="para1">
+In our youtube channel computer programming language tutorial are available.
+Tutorial are given by well experience candidate. Language - C, HTML, Javascript, 
+DataStructure, DBMS.All are very simple and easy to understand with apt example and 
+powerpoint presentation. By learning and practicing those example you can get enough
+knowledge to code your own program.
+</p>
+
+</div>
+
+<input type="button" value="Changecolor" onclick="changeColor();">
+
+<br>
+<br>
+<br>
+Javascript-HTML DOM
+
+    - Document Object Model 
+
+    - Allows to access entire Html ( web ) page
+
+    - DOM is created when page is loaded 
+
+    - Javascript can change all the HTML elements, HTML attributes, CSS styles in the page 
+
+    - Javascript can add / remove HTML elements and attributes 
+
+    - Javascript can react to all the existing element event
+
+
+
+
+DOM structure 
+                                                -------------------
+                                                |     <html>      |
+                                                ------------------- 
+                                                        |
+                                                        |
+            --------------------------------------------------------------------------
+            |                                                                        |
+            |                                                                        |
+      --------------                                                           --------------
+      |  <head>    |                                                           |   <body>   |
+      --------------                                                           --------------
+            |                                                                        |
+            |                                                                        |
+    ---------------                                            ----------------------------------------------
+    |  <title>    |                                           |                                            |         
+    ---------------                                      ---------------                            -------------------
+            |                                            |     <p>      |                           |     <div>       |
+            |                                            ----------------                           -------------------
+    -------------------                                        |                                            |
+    |     text        |                                        |                                            |
+    -------------------                                  -------------------                        -------------------
+                                                         |     text        |                        |      text       |
+                                                         -------------------                        -------------------
+
+
+
+
+                                                         
+Nodes
+
+    - All HTML Elements are treated as node or objects 
+
+    - Document - Document Node 
+
+    - HTML element - Element Nodes 
+
+    - HTML attributes - Attribute Nodes 
+
+    - Text inside HTML elements - Text Nodes 
+
+
+DOM-properties, Methods 
+
+    - Properties 
+        
+        - Used to change / set values of HTML 
+        
+            - innerHTML
+
+            - innerText 
+
+        - Methods 
+
+            - Actions that perform on HTML elements 
+
+                - getElementByID()
+
+                - getElementByName()
+
+                - getElementByTagName()
+
+                - getElementByClassName()
+
+
+DOM Manipulation 
+
+    - createElement()
+
+    - createTextNode()
+
+    - appendChild()
+
+    - replaceChild()
+
+    - childElementCount()
+
+    - removeChild()
+
+    - getAttribute()
+
+    - setAttribute()
+
+
+</body>
+</html>

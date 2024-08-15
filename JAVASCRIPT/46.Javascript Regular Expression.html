@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-compatible" content="ie=edge">
+<title>JS Regular Expression</title>
+<script>
+
+    var regex = "Programming Line - Computer programming Language";
+
+    document.write("<b>String </b> :" ,regex);
+    document.write("<br><b>Search 'program'</b> :" ,regex.search(/program/));
+    document.write("<br><b>Replace</b> :" ,regex.replace(/computer/i ,'system'));
+
+    // document.write("<br><b>Global match 'program' </b> :" ,regex.match(/program/gi));
+    // var regex1 = "programming \n Line - \n programming languages ";
+    // document.write("<br><b>multiline match 'program'</b> :" ,regex1.match(/L/gmi));
+
+    // Patterns 
+    var accDetails='IndBank 78782341890 SB';
+    var patt1 = /[Ind]/g;
+    var patt2 = /[782]/g;       //var patt2 = /[2-4]/g;  - return 2,3,4
+    var patt3 = /[7878|SB]/g;       // var patt3 = /[DF]/g; - return null
+    document.write("<br> [Ind] pattern :" ,accDetails.match(patt1));
+    document.write("<br> [782] pattern :" ,accDetails.match(patt2));
+    document.write("<br> [7878|SB] pattern :" ,accDetails.match(patt3));
+
+    //example
+    var regex2 = /fox|cat|dog/g;
+    var sample = "The quick brown fox jumps over the lazy dog";
+    document.write("<br> Output :" ,sample.match(regex2));
+
+    //Meta characters 
+    var accDetails="IndBnk 78782341890 SB";
+    var char1 = /\d/g;
+    var char2 = /\s/g;
+    var char3 = /0\b/;
+    document.write("<br> Digit pattern :" ,accDetails.match(char1));
+    document.write("<br> White space :" ,accDetails.match(char2));
+    document.write("<br> Ending :" ,accDetails.search(char3));
+
+    //Quantifiers
+    var num = "98897062348";
+    var quan1 = /8+/g;
+    var quan2 = /98*/;
+    var quan3 = /89?/g;
+    document.write("<br> 8+ pattern :" ,num.match(quan1));
+    document.write("<br> 98* pattern :" ,num.match(quan2));
+    document.write("<br> 89? Pattern :" ,num.match(quan3));
+
+    //methods
+    var name = "Rakesh";
+    var pattern = /h/;
+    document.write("<br> test() - h :" ,pattern.test(name));
+    document.write("<br> exec() - h :" ,pattern.exec(name));
+    var obj = /h/.exec("sweet home");
+    document.write("<br>" ,obj[0]," ",obj.index," ",obj.input);
+
+
+</script>
+</head>
+<body>
+
+<br>
+<br>
+<br>
+Javascript-Regular Expression
+
+    - It is a sequence of character that forms a search pattern 
+
+    - Can be a single character or complicated pattern 
+
+    - Used to perform all type of text search and text replace opertions
+
+
+
+RegExp-syntax 
+
+    - var regex = new regExp( pattern, modifiers )
+
+    - var regex = /pattern /modifiers 
+
+    - pattern - A string that specifies the pattern of the regex or another regex 
+
+    - modifiers - ( Optional ) - 'g', 'i', 'm'
+
+    - /..../  - Creation of RegExp 
+
+
+
+Using String Methods 
+
+    - search() - Uses an expression to search for a match and returns position 
+
+    - replace() - return a modified string where the pattern is replaced 
+
+    - match() - Return all matches of the pattern in the string 
+
+
+RegEx-Patterns
+        _______________________________________________________________
+        |  [a b c]  |  Find any Character between the brackets        |
+        ---------------------------------------------------------------
+        |  [0 - 9]  |  Find any digits between the brackets           |
+        ---------------------------------------------------------------
+        |  [x | y]  |  Find any of the alternative separated with |   | 
+        ---------------------------------------------------------------
+
+    Meta character 
+        __________________________________________________________________________________ 
+        |  \d    |    Digits                                                             |
+        ----------------------------------------------------------------------------------
+        |  \s    |    white Space                                                        |
+        ----------------------------------------------------------------------------------
+        |  \b    |    Match at the beginning of the word \b WORD end of the word WORD \b |
+        ----------------------------------------------------------------------------------
+
+
+RegEx-Quantifiers 
+
+    - Quantifiers - Quantifiers 
+        _______________________________________________________________ 
+        |   x+   |   Matches any string that contains atleast one x   |
+        --------------------------------------------------------------- 
+        |   x*   |   Zero or more occurances of x                     |
+        ---------------------------------------------------------------
+        |   x?   |   Zero or one occurances of x                      |
+        ---------------------------------------------------------------
+
+    - Using regExp methods :
+        - text()
+            - Returns true or false depending on the result 
+        - exec()
+            - Returns found text as on object if the match is found else returns empty object
+
+
+</body>
+</html>

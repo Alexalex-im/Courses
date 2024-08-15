@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JS  DOM Query Selector All</title>
+<style>
+    .red{
+        color:red;
+    }
+
+    .yellow{
+        color:yellow;
+    }
+
+</style>
+<script>
+
+    // function para(){
+    //     var p1 = document.querySelectorAll("p");
+    //     for( i=0; i<p1.length; i++)
+    //     {
+    //         p1[i].style.color = "blue";
+    //     }
+    // }
+
+
+    // function func(){
+    //     var clr = document.querySelectorAll(" h4, li");
+    //     for( i=0; i<clr.length; i++)
+    //     {
+    //         clr[i].style.color = "red";
+    //     }
+    // }
+
+
+    var items = document.querySelectorAll("li");
+    for ( i=0; i<items.length; i++)
+    {
+        items[i].innerHTML += "is yummy ";
+    }
+
+    var yitems = document.querySelectorAll(".yellow li");
+    for ( j=0; j<yitems.length; j++)
+    {
+        yitems[j].innerHTML += "and delicious!!!" ;
+    }
+
+    var firstRed = document.querySelector(" .red li");
+    document.write("<br> First red :", firstRed.innerHTML);
+
+    var firstyellow = document.querySelector(" .yellow li");
+    document.write("<br> First red :", firstyellow.innerHTML);
+
+</script>
+</head>
+<body bgcolor="green">
+    <h1>querySelectorALL Example</h1>
+    <h2>Red Fruits</h2>
+    <ul class="red">
+        <li>Apple</li>
+        <li>Strawberry</li>
+        <li>Cherry</li>
+    </ul>
+
+    <h2>Yellow fruits</h2>
+    <ul class="yellow">
+        <li>Mango</li>
+        <li>Pineapple</li>
+        <li>Lemon</li>
+    </ul>
+
+<h4>DOM Method</h4>
+<h5>Query selector()</h5>
+
+<div>
+<p id="intro">
+Programming Line by Rakesh.
+Many Computer programming languages are available in this channel.</p>
+<p class="comp">Language are explained by well experienced lecturers</p>
+<p class="comp">There are many levels - Beginning, Intermediate, Advanced lecturer</p>
+</div>
+
+<ul id="PL">
+    <li>C</li>
+    <li class="main">C++</li>
+    <li>Java</li>
+    <li>Javascript</li>
+    <li>HTML</li>
+</ul>
+<a href="https://www.youtube.com/results?search_query=programming+Line" target="_blank" >Subscribe</a>
+<button onclick="para();">Click</button>
+<input type="button" value="change" onclick="func();">
+
+
+
+
+
+
+
+
+
+
+
+<br>
+<br>
+<br>
+JS - DOM Query Selector All 
+
+    - querySelectorALL()
+
+        - Return all the element that matches a specified Css selectors 
+
+        - Collection of elements are accessed using array index
+
+
+
+
+
+
+
+
+</body>
+</html>

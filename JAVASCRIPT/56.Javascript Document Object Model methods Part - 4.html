@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JS Document Object Model Methods Part - 4</title>
+
+<style>
+    .intro{
+        background-color: chocolate;
+        color:darkblue;
+
+    }
+
+    .JS{
+        background-color: darkgoldenrod;
+        color:darkgreen;
+    }
+
+
+
+
+
+</style>
+</head>
+<body>
+<script>
+
+    function show(){
+        var change = document.getElementsByClassName("intro");
+        var len1 = change.length;
+        alert("Intro count" +len1);
+        for(var i=0; i<len1; i++)
+        {
+            change[i].style.background="yellow";
+            change[i].style.color="red";
+        }
+
+        var change1 = document.getElementsByClassName("JS");
+        var len2 = change1.length;
+        alert("JS count" +len2);
+        for(var i=0; i<len2; i++)
+        {
+            change1[i].style.background="green";
+            change1[i].style.color="yellow";
+        }
+    }
+    
+</script>
+    <h4>DOM-Select by class name</h4>
+    <h4>Javascript Introduction</h4>
+
+    <div>
+        <p id="p1"  class="intro">
+            Javascript is the most popular and widely used clien-side scripting language 
+            Client-side scripting refers to scripts that run within your web browser.
+            Javascript is designed to add interactivity and dynamic effects to the 
+            web pages by manipulating the content.
+        </p>
+    </div>
+        <p id="p2" class="exp">Javascript is an object-oriented language, and it also has some 
+            similarities in syntax to java programming language.But ,
+            Javascript is not related to java.
+        </p>
+        <p class="intro">
+            Javascript is officially maintained by ECMA (European Computer
+            Manufacturers Association ) as ECMA Script.ECMA Script 6 (or ES6)
+            is the latest major version of the ECMA Script standard.
+        </p>
+        <br>
+        <p>
+            There are typically three ways to add Javascript to a web page :
+            <p class="JS">Embedding the javascript code between a pair  of script tag.</p>
+        </p>
+        <p class="intro">
+            Creating an external Javascript file with the .js extension and 
+            then load it within the page through the src attribute of the 
+            script tag.
+        </p>
+        <p class="JS">
+            Placing the Javascript code directly inside an Html tag using the 
+            specing tag attributes such as onclick, onmouseover, onkeypress, onload
+        </p>
+
+        <input type="button" value="click" onclick="show();">
+
+<br>
+<br>
+<br>
+<br>
+Javascript-DOM Methods 
+    
+    - getElementByID()
+    
+    - getElementByName()
+    
+    - getElementByTagName()
+    
+    - getElementByClassName()
+    
+
+getElementByClassName() 
+
+    - Used to find and retrieve collection of all elements with the specific class name 
+
+    - Array index is used to access the elements with the specific tag - Html collection is an array of objects 
+
+    - Length property is used to find the number of elements 
+
+    - Loop is used to modify all the elements 
+
+
+</body>
+</html>

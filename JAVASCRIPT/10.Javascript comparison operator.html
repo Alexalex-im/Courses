@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Js comparison operator</title>
+<script>
+
+    function compare(){
+        var string1 ="2", value=2;
+        if(string1==value)
+        {
+            alert("Both value '2' and 2 are same");
+        }else{
+            alert("Both are not same");
+        }
+
+        if(string1===value)         /* double == are triple equalto === */
+        {
+            alert("Both variable type are same");
+        }else{
+            alert("Both variable type '2' and 2 are not same");
+        }
+    }
+
+    function verify(){
+
+        var name=document.getElementById("n1").value;
+        var age=document.getElementById("ag").value;
+        var nation=document.getElementById("n2").value;
+
+        if(nation != "indian")
+        {
+            alert("Only indians can eligible to vote")
+        }
+        else{
+            if(age>=18)
+            {
+                if(age==18)
+
+                {
+                    document.write("Welcome to vote for first time <br>");
+                }
+
+                document.write("Eligible to vote <br>");
+            }
+            
+        else if(age<18)
+        {
+            document.write("Not eligible to vote");
+        }
+    }
+
+    }
+</script>
+</head>
+<body>
+
+<h1>User Details</h1>
+Enter name
+<input type="text" name="name1" id="n1"><br>
+
+Enter age
+<input type="number" name="age" id="ag"><br>
+
+Enter Nationality
+<input type="text" name="nation" id="n2"><br>
+
+<input type="submit" value="submit" onclick="verify();">
+
+<input type="button" value="check" onclick="compare();">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Comparison operator
+
+                        __________________________________
+                        |        Operation               |
+                        ----------------------------------
+                        |            ==                  |
+                        ----------------------------------
+                        |            ===                 |
+                        ----------------------------------
+                        |            !=                  |
+                        ----------------------------------
+                        |            !==                 |
+                        ----------------------------------
+                        |            >                   |
+                        ---------------------------------- 
+                        |            >=                  |
+                        ----------------------------------
+                        |            <                   |
+                        ----------------------------------
+                        |            <=                  |
+                        ----------------------------------
+
+
+
+
+
+
+
+</body>
+</html>
