@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>forms</title>
+<style>
+        body{
+        background-color:pink;
+    }
+
+</style>
+</head>
+<body>
+ <form action="sample.html" target="_blank" style="color:red;font-size:20px;background-color: green;padding:20px;margin:10px;">   <!-- action attribute - go to another website-->
+    Name    <input type="text" name="name" size="30" autofocus>          <!-- Autofocus attribute - select first input elements-->
+
+    <br>
+    Phone number  <input type="text" name="phone number" placeholder="Enter your number">    <!-- placeholder attributes - input box text-->
+    <br>
+    E-mail  <input maxlength="10" type="text" name="E-mail Id">         <!-- Maxlength attribute - input can only in 10 values-->
+    <br>
+    date of birth 
+    <select size="4">        <!-- size attributes - define size in 4 values-->
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+    </select>
+    
+    <select size="4">
+        <option>January</option>
+        <option>Febrary</option>
+        <option>March</option>
+        <option>April</option>
+        <option>May</option>
+    </select>
+    
+    <select size="4">
+        <option>2000</option>
+        <option>2001</option>
+        <option>2002</option>
+        <option>2003</option>
+        <option>2004</option>
+    </select>
+<br>   
+Gender <input type="radio" name="gender">Male
+       <input type="radio" name="gender"  checked >Female  <!-- checked attributes - fix that default-->
+       <input type="radio" name="gender">Others
+<br>
+
+<textarea rows="5" cols="30">        
+    Hii .....
+</textarea>
+
+
+<br>
+ <input type="button" value="submit" >  
+<br>
+
+</form>
+
+
+
+
+
+</body>
+</html>
